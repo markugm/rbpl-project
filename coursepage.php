@@ -43,14 +43,14 @@
         <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
             <!-- Kiri: Hamburger Menu -->
             <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="toggleSidebar()">
-            <i class="bi bi-list"></i>
+                <i class="bi bi-list"></i>
             </button>
             <!-- Kanan: Megaphone + Profil -->
             <div class="flex items-center gap-4">
-            <!-- Tombol Megaphone -->
-            <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
-                <i class="bi bi-megaphone"></i>
-            </button>
+                <!-- Tombol Megaphone -->
+                <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
+                    <i class="bi bi-megaphone"></i>
+                </button>
                 <!-- Info Pengguna -->
                 <div class="flex items-center gap-3">
                     <div class="text-right">
@@ -61,28 +61,30 @@
                 </div>
             </div>
         </div>
-            <!-- KONTEN KURSUS -->
+        
+        <!-- KONTEN KURSUS -->
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
             <div class="flex gap-6 mb-6">
-            <button class="font-semibold border-b-2 border-black pb-1">Semua</button>
-            <button class="text-gray-400">Tuntas</button>
+                <button class="font-semibold border-b-2 border-black pb-1">Semua</button>
+                <button class="text-gray-400">Tuntas</button>
             </div>
 
             <!-- Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Card Item -->
-            <div class="bg-white rounded-lg shadow p-4">
-                <div class="flex items-center mb-3">
-                <span class="bg-black text-white px-2 py-1 rounded-full text-xs font-bold">#1</span>
-                <h3 class="ml-3 font-semibold">Pengenalan Sepeda</h3>
+            <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex gap-4 items-start">
+                <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
+                <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#1</div>
                 </div>
-                <p class="text-sm text-gray-600 mb-3">Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda</p>
-                <p class="text-sm text-gray-500 mb-3">3 Materi | 1 Kuis</p>
-                <button class="bg-blue-900 text-white px-4 py-1 rounded">Mulai</button>
+                    <div class="flex-1">
+                    <h3 class="font-semibold text-sm mb-1">Pengenalan Sepeda</h3>
+                    <p class="text-xs text-gray-600 leading-snug mb-2">Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda</p>
+                    <p class="text-xs text-gray-500 mb-2">3 Materi | 1 Kuis</p>
+                    <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded">Mulai</button>
+                </div>
             </div>
-            <!-- Card lainnya tinggal duplikasi dan sesuaikan -->
-            <!-- Tambahkan #2 sampai #6 sesuai gambar -->
+                <!-- Duplikasi di bawah ini untuk card #2 sampai #6 -->
             </div>
         </div>
     </main>
