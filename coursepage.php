@@ -61,4 +61,28 @@
                 </div>
             </div>
         </div>
+            <!-- KONTEN KURSUS -->
+        <div class="px-6 py-6">
+            <h2 class="text-2xl font-bold mb-4">Kursus</h2>
+            <div class="flex gap-6 mb-6">
+            <button class="font-semibold border-b-2 border-black pb-1">Semua</button>
+            <button class="text-gray-400">Tuntas</button>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Card Item -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <div class="flex items-center mb-3">
+                <span class="bg-black text-white px-2 py-1 rounded-full text-xs font-bold">#1</span>
+                <h3 class="ml-3 font-semibold">Pengenalan Sepeda</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda</p>
+                <p class="text-sm text-gray-500 mb-3">3 Materi | 1 Kuis</p>
+                <button class="bg-blue-900 text-white px-4 py-1 rounded">Mulai</button>
+            </div>
+            <!-- Card lainnya tinggal duplikasi dan sesuaikan -->
+            <!-- Tambahkan #2 sampai #6 sesuai gambar -->
+            </div>
+        </div>
     </main>
