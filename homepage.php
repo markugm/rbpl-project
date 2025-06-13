@@ -1,4 +1,3 @@
-<!-- index.php -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -71,6 +70,69 @@
         </div>
       </div>
     </div>
+
+    <!-- Bagian Kursus -->
+    <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold">Kursus</h2>
+        <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+      </div>
+      <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <!-- Bagian Hasil Kuis -->
+    <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold">Hasil Kuis Kamu</h2>
+        <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+      </div>
+      <div id="daftarHasilKuis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <script>
+      const kursusList = [
+        { judul: "Pengenalan Sepeda", materi: 3, kuis: 1 },
+        { judul: "Sistem Penggerak", materi: 4, kuis: 2 },
+        { judul: "Sistem Pengereman dan Keselamatan", materi: 3, kuis: 1 },
+        { judul: "Sistem Suspensi dan Kenyamanan Berkendara", materi: 2, kuis: 1 },
+      ];
+
+      const hasilKuisList = [
+        { nilai: 80, judul: "Anatomi Sepeda", tanggal: "06/04/2025" },
+        { nilai: 90, judul: "Rem dan Keselamatan", tanggal: "09/04/2025" },
+        { nilai: 75, judul: "Suspensi", tanggal: "12/04/2025" },
+        { nilai: 88, judul: "Sistem Penggerak", tanggal: "14/04/2025" },
+      ];
+
+      const kursusContainer = document.getElementById("daftarKursus");
+      const kuisContainer = document.getElementById("daftarHasilKuis");
+
+      kursusList.forEach((item, index) => {
+        kursusContainer.innerHTML += `
+          <div class="border rounded-lg p-4 shadow-sm">
+            <div class="relative h-24 bg-gray-100 rounded mb-3">
+              <span class="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full">#${index + 1}</span>
+            </div>
+            <h3 class="font-semibold text-sm mb-2">${item.judul}</h3>
+            <div class="text-xs text-gray-600 mb-2">
+              📄 ${item.materi} Materi &nbsp;&nbsp; 📊 ${item.kuis} Kuis
+            </div>
+            <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Lihat</button>
+          </div>
+        `;
+      });
+
+      hasilKuisList.forEach((item) => {
+        kuisContainer.innerHTML += `
+          <div class="border rounded-lg p-4 text-center shadow-sm">
+            <div class="text-2xl font-bold mb-1">${item.nilai}<span class="text-sm font-normal">/100</span></div>
+            <p class="text-sm font-medium mb-1">${item.judul}</p>
+            <p class="text-xs text-gray-500 mb-2">📅 ${item.tanggal}</p>
+            <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Review</button>
+          </div>
+        `;
+      });
+    </script>
 
       <!-- Kartu Kursus -->
       <h3 class="text-lg font-bold mb-2">Kursus</h3>
