@@ -41,26 +41,36 @@
     <!-- Konten Utama -->
     <main class="flex-1 p-6 overflow-y-auto">
       <!-- Header -->
-      <div class="top-dashboard">
-        <div class="left-section">
-          <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="profile-img">
-          <div class="greeting">
-            <h2>Selamat Pagi, <strong>Ajuy Sutiyo</strong></h2>
-            <p>Hari ini adalah hari ke-7 pelatihanmu</p>
-            <button class="btn-akun">Buka Akun Kamu &gt;</button>
+      <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
+      <!-- Kiri -->
+      <div class="flex items-center gap-4">
+        <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-20 h-20 rounded-full border-4 border-blue-700" />
+        <div>
+          <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
+          <p class="text-gray-600">Hari ini adalah hari ke-7 pelatihanmu</p>
+          <button class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
+            Buka Akun Kamu &gt;
+          </button>
+        </div>
+      </div>
+      <!-- Kanan -->
+      <div class="flex gap-4">
+        <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+          <span class="text-xl">📖</span>
+          <div>
+            <p class="font-bold">2/16</p>
+            <p class="text-sm text-gray-600">Kursus</p>
           </div>
         </div>
-        <div class="right-section">
-          <div class="stat-box">
-            <div class="icon">📖</div>
-            <div><strong>2/16</strong><br><span>Kursus</span></div>
-          </div>
-          <div class="stat-box">
-            <div class="icon">📈</div>
-            <div><strong>4/7</strong><br><span>Kuis</span></div>
+        <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+          <span class="text-xl">📈</span>
+          <div>
+            <p class="font-bold">4/7</p>
+            <p class="text-sm text-gray-600">Kuis</p>
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Kartu Kursus -->
       <h3 class="text-lg font-bold mb-2">Kursus</h3>
