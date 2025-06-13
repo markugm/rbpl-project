@@ -1,90 +1,104 @@
-<!-- index.php -->
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Jago Sepeda Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
-  <div class="flex h-screen">
-    <!-- Sidebar -->
-    <aside class="w-60 bg-blue-900 text-white p-4">
-      <div class="text-2xl font-bold mb-10">🚲 JAGO SEPEDA</div>
-      <nav class="space-y-4">
-        <a href="#" class="block px-4 py-2 bg-white/10 rounded">🏠 Beranda</a>
-        <a href="#" class="block px-4 py-2 hover:bg-white/10 rounded">📘 Kursus</a>
-        <a href="#" class="block px-4 py-2 hover:bg-white/10 rounded">📝 Hasil Kuis</a>
-        <a href="#" class="block px-4 py-2 hover:bg-white/10 rounded">👤 Profil</a>
-        <a href="#" class="block px-4 py-2 hover:bg-white/10 rounded">⚙️ Pengaturan</a>
-        <a href="#" class="block px-4 py-2 hover:bg-red-600 rounded">🚪 Keluar</a>
-      </nav>
-    </aside>
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { BookOpen, FileText, User, Settings, LogOut, Home } from "lucide-react";
 
-    <!-- Konten Utama -->
-    <main class="flex-1 p-6">
-      <!-- Header -->
-      <div class="bg-white rounded-lg p-6 mb-6 shadow flex justify-between items-center">
-        <div>
-          <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
-          <p class="text-gray-500">Hari ini adalah hari ke-7 pelatihanmu</p>
-          <a href="#" class="text-blue-600 text-sm underline">Buka Akun Kamu</a>
+export default function Dashboard() {
+  return (
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div className="w-64 bg-blue-900 text-white p-4 space-y-6">
+        <div className="text-xl font-bold flex items-center space-x-2">
+          <img src="/logo-bike.png" alt="logo" className="w-8 h-8" />
+          <span>JAGO SEPEDA</span>
         </div>
-        <div class="text-center">
-          <p class="font-semibold">📚 2/16 Kursus</p>
-          <p class="font-semibold">🧠 4/7 Kuis</p>
+        <nav className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Home className="w-4 h-4" />
+            <span>Beranda</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <BookOpen className="w-4 h-4" />
+            <span>Kursus</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <FileText className="w-4 h-4" />
+            <span>Hasil Kuis</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <User className="w-4 h-4" />
+            <span>Profil</span>
+          </div>
+        </nav>
+        <div className="absolute bottom-8 space-y-4">
+          <div className="flex items-center space-x-2">
+            <Settings className="w-4 h-4" />
+            <span>Pengaturan</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <LogOut className="w-4 h-4" />
+            <span>Keluar</span>
+          </div>
         </div>
       </div>
 
-      <!-- Kartu Kursus -->
-      <h3 class="text-lg font-bold mb-2">Kursus</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <?php
-        $kursus = [
-          ["judul" => "Pengenalan Sepeda", "materi" => 3, "kuis" => 1],
-          ["judul" => "Sistem Penggerak", "materi" => 4, "kuis" => 2],
-          ["judul" => "Sistem Pengereman dan Keselamatan", "materi" => 3, "kuis" => 1],
-          ["judul" => "Sistem Suspensi dan Kenyamanan Berkendara", "materi" => 2, "kuis" => 1],
-        ];
-        $no = 1;
-        foreach ($kursus as $k) {
-          echo "
-            <div class='bg-white p-4 rounded-lg shadow'>
-              <div class='text-sm text-right mb-1'>#{$no}</div>
-              <h4 class='font-bold mb-2'>{$k['judul']}</h4>
-              <p class='text-sm text-gray-500'>📄 {$k['materi']} Materi</p>
-              <p class='text-sm text-gray-500'>🧪 {$k['kuis']} Kuis</p>
-              <button class='mt-2 bg-blue-700 text-white px-4 py-1 rounded'>Lihat</button>
+      {/* Main Content */}
+      <div className="flex-1 bg-gray-100 p-6 overflow-auto">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h1 className="text-2xl font-semibold">Selamat Pagi, Ajuy Sutiyo</h1>
+            <p className="text-gray-500">Hari ini adalah hari ke-7 pelatihanmu</p>
+            <Button variant="outline" className="mt-2">Buka Akun Kamu</Button>
+          </div>
+          <div className="space-y-2 text-right">
+            <div className="text-sm">2/16 Kursus</div>
+            <div className="text-sm">4/7 Kuis</div>
+            <div className="flex items-center justify-end space-x-2 mt-2">
+              <span>Ajuy Sutiyo</span>
+              <img src="/profile.jpg" alt="profile" className="w-8 h-8 rounded-full" />
             </div>
-          ";
-          $no++;
-        }
-        ?>
-      </div>
+          </div>
+        </div>
 
-      <!-- Hasil Kuis -->
-      <h3 class="text-lg font-bold mb-2">Hasil Kuis Kamu</h3>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <?php
-        $kuis = [
-          ["judul" => "Anatomi Sepeda", "skor" => 80, "tanggal" => "06/04/2025"],
-          ["judul" => "Sistem Penggerak", "skor" => 85, "tanggal" => "06/04/2025"],
-          ["judul" => "Rantai dan Pemeliharaannya", "skor" => 80, "tanggal" => "07/04/2025"],
-          ["judul" => "Sistem Pengereman dan Keselamatan", "skor" => 90, "tanggal" => "08/04/2025"],
-        ];
-        foreach ($kuis as $k) {
-          echo "
-            <div class='bg-white p-4 rounded-lg shadow'>
-              <div class='text-xl font-bold'>{$k['skor']}/100</div>
-              <p class='text-sm'>{$k['judul']}</p>
-              <p class='text-xs text-gray-500'>{$k['tanggal']}</p>
-              <button class='mt-2 bg-blue-700 text-white px-4 py-1 rounded'>Review</button>
-            </div>
-          ";
-        }
-        ?>
+        {/* Kursus */}
+        <h2 className="text-xl font-semibold mb-2">Kursus</h2>
+        <div className="grid grid-cols-4 gap-4 mb-6">
+          {["Pengenalan Sepeda", "Sistem Penggerak", "Sistem Pengereman dan Keselamatan", "Sistem Suspensi dan Kenyamanan Berkendara"].map((title, i) => (
+            <Card key={i}>
+              <CardContent className="p-4 space-y-2">
+                <div className="text-lg font-medium">{title}</div>
+                <div className="text-sm text-gray-500">{i + 2} Materi • {i % 2 + 1} Kuis</div>
+                <Button className="w-full">Lihat</Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Hasil Kuis */}
+        <h2 className="text-xl font-semibold mb-2">Hasil Kuis Kamu</h2>
+        <div className="grid grid-cols-4 gap-4">
+          {[
+            { score: 80, title: "Anatomi Sepeda", date: "06/04/2025" },
+            { score: 85, title: "Sistem Penggerak", date: "06/04/2025" },
+            { score: 80, title: "Rantai dan Pemeliharaannya", date: "07/04/2025" },
+            { score: 90, title: "Sistem Pengereman dan Keselamatan", date: "08/04/2025" },
+          ].map((item, i) => (
+            <Card key={i}>
+              <CardContent className="p-4 space-y-2">
+                <div className="text-2xl font-bold">{item.score}/100</div>
+                <div className="text-sm">{item.title}</div>
+                <div className="text-xs text-gray-500">{item.date}</div>
+                <Button className="w-full">Review</Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <footer className="text-center text-sm text-gray-400 mt-6">
+          Copyright © jagosepeda.com 2025
+        </footer>
       </div>
-    </main>
-  </div>
-</body>
-</html>
+    </div>
+  );
+}
