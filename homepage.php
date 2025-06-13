@@ -133,11 +133,10 @@
           `;
         });
       </script>
+      <footer class="border-t text-center text-sm text-gray-600 py-3">
+        Copyright © <a href="https://jagosepeda.com" class="hover:underline text-blue-700">jagosepeda.com</a> 2025
+      </footer>
     </main>
-    <!-- Footer Copyright -->
-    <footer class="border-t text-center text-sm text-gray-600 py-3">
-      Copyright © <a href="https://jagosepeda.com" class="hover:underline text-blue-700">jagosepeda.com</a> 2025
-    </footer>
   </div>
 </body>
 </html>
