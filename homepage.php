@@ -133,8 +133,7 @@
           `;
         });
       </script>
-      <hr>
-      <footer class="border-t text-center text-sm text-gray-600 py-3">
+      <footer class="border-t text-center text-sm text-gray-600 py-4 mt-6">
         Copyright © <a href="https://jagosepeda.com" class="hover:underline text-blue-700">jagosepeda.com</a> 2025
       </footer>
     </main>
