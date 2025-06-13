@@ -11,7 +11,7 @@
         <!-- Sidebar -->
         <aside class="w-60 bg-blue-900 text-white flex flex-col justify-between p-4">
             <div>
-                <div class="text-2xl font-bold mb-10 text-center">🚲 JAGO SEPEDA</div>bg-white/10 rounded font-semibold
+                <div class="text-2xl font-bold mb-10 text-center">🚲 JAGO SEPEDA</div>
                 <nav class="space-y-2">
                     <a href="homepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                         <i class="bi bi-house-door"></i> Beranda
