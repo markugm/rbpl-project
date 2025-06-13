@@ -38,7 +38,25 @@
     </aside>
 
     <!-- Konten Utama -->
-    <main class="flex-1 p-6 overflow-y-auto">
+    <main class="flex-1 overflow-y-auto">
+      <!-- TOP BAR -->
+      <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
+        <!-- Tombol menu (jika dibutuhkan nanti) -->
+        <div>
+          <i class="bi bi-megaphone text-xl text-gray-700"></i>
+        </div>
+        <!-- Info pengguna -->
+        <div class="flex items-center gap-3">
+          <div class="text-right">
+            <p class="font-semibold text-gray-900">Ajuy Sutiyo</p>
+            <p class="text-sm text-gray-500">Pegawai Training</p>
+          </div>
+          <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
+        </div>
+      </div>
+
+      <!-- Isi konten utama -->
+      <div class="p-6">
         <!-- Header -->
         <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
         <!-- Kiri -->
