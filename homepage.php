@@ -41,15 +41,24 @@
     <!-- Konten Utama -->
     <main class="flex-1 p-6 overflow-y-auto">
       <!-- Header -->
-      <div class="bg-white rounded-lg p-6 mb-6 shadow flex justify-between items-center">
-        <div>
-          <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
-          <p class="text-gray-500">Hari ini adalah hari ke-7 pelatihanmu</p>
-          <a href="#" class="text-blue-600 text-sm underline">Buka Akun Kamu</a>
+      <div class="top-dashboard">
+        <div class="left-section">
+          <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="profile-img">
+          <div class="greeting">
+            <h2>Selamat Pagi, <strong>Ajuy Sutiyo</strong></h2>
+            <p>Hari ini adalah hari ke-7 pelatihanmu</p>
+            <button class="btn-akun">Buka Akun Kamu &gt;</button>
+          </div>
         </div>
-        <div class="text-center">
-          <p class="font-semibold">📚 2/16 Kursus</p>
-          <p class="font-semibold">🧠 4/7 Kuis</p>
+        <div class="right-section">
+          <div class="stat-box">
+            <div class="icon">📖</div>
+            <div><strong>2/16</strong><br><span>Kursus</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="icon">📈</div>
+            <div><strong>4/7</strong><br><span>Kuis</span></div>
+          </div>
         </div>
       </div>
 
