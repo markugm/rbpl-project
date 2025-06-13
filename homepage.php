@@ -41,17 +41,19 @@
     <main class="flex-1 overflow-y-auto">
       <!-- TOP BAR -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
-        <!-- Tombol menu (jika dibutuhkan nanti) -->
-        <div>
-          <i class="bi bi-megaphone text-xl text-gray-700"></i>
-        </div>
-        <!-- Info pengguna -->
-        <div class="flex items-center gap-3">
-          <div class="text-right">
-            <p class="font-semibold text-gray-900">Ajuy Sutiyo</p>
-            <p class="text-sm text-gray-500">Pegawai Training</p>
+        <div class="flex items-center gap-4 ml-auto">
+          <!-- Tombol Megaphone -->
+          <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
+            <i class="bi bi-megaphone"></i>
+          </button>
+          <!-- Info Pengguna -->
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <p class="font-semibold text-gray-900">Ajuy Sutiyo</p>
+              <p class="text-sm text-gray-500">Pegawai Training</p>
+            </div>
+            <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
           </div>
-          <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
         </div>
       </div>
 
