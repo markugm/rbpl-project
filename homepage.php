@@ -39,149 +39,100 @@
 
     <!-- Konten Utama -->
     <main class="flex-1 p-6 overflow-y-auto">
-      <!-- Header -->
-      <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
-      <!-- Kiri -->
-      <div class="flex items-center gap-4">
-        <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-20 h-20 rounded-full border-4 border-blue-700" />
-        <div>
-          <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
-          <p class="text-gray-600">Hari ini adalah hari ke-7 pelatihanmu</p>
-          <button class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
-            Buka Akun Kamu &gt;
-          </button>
-        </div>
-      </div>
-      <!-- Kanan -->
-      <div class="flex gap-4">
-        <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
-          <span class="text-xl">📖</span>
+        <!-- Header -->
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
+        <!-- Kiri -->
+        <div class="flex items-center gap-4">
+          <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-20 h-20 rounded-full border-4 border-blue-700" />
           <div>
-            <p class="font-bold">2/16</p>
-            <p class="text-sm text-gray-600">Kursus</p>
+            <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
+            <p class="text-gray-600">Hari ini adalah hari ke-7 pelatihanmu</p>
+            <button class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
+              Buka Akun Kamu &gt;
+            </button>
           </div>
         </div>
-        <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
-          <span class="text-xl">📈</span>
-          <div>
-            <p class="font-bold">4/7</p>
-            <p class="text-sm text-gray-600">Kuis</p>
+        <!-- Kanan -->
+        <div class="flex gap-4">
+          <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+            <span class="text-xl">📖</span>
+            <div>
+              <p class="font-bold">2/16</p>
+              <p class="text-sm text-gray-600">Kursus</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+            <span class="text-xl">📈</span>
+            <div>
+              <p class="font-bold">4/7</p>
+              <p class="text-sm text-gray-600">Kuis</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bagian Kursus -->
-    <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow mb-6">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-semibold">Kursus</h2>
-        <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+      <!-- Bagian Kursus -->
+      <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow mb-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">Kursus</h2>
+          <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+        </div>
+        <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
-      <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
-    </div>
 
-    <!-- Bagian Hasil Kuis -->
-    <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-semibold">Hasil Kuis Kamu</h2>
-        <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+      <!-- Bagian Hasil Kuis -->
+      <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">Hasil Kuis Kamu</h2>
+          <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+        </div>
+        <div id="daftarHasilKuis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
-      <div id="daftarHasilKuis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
-    </div>
 
-    <script>
-      const kursusList = [
-        { judul: "Pengenalan Sepeda", materi: 3, kuis: 1 },
-        { judul: "Sistem Penggerak", materi: 4, kuis: 2 },
-        { judul: "Sistem Pengereman dan Keselamatan", materi: 3, kuis: 1 },
-        { judul: "Sistem Suspensi dan Kenyamanan Berkendara", materi: 2, kuis: 1 },
-      ];
-
-      const hasilKuisList = [
-        { nilai: 80, judul: "Anatomi Sepeda", tanggal: "06/04/2025" },
-        { nilai: 90, judul: "Rem dan Keselamatan", tanggal: "09/04/2025" },
-        { nilai: 75, judul: "Suspensi", tanggal: "12/04/2025" },
-        { nilai: 88, judul: "Sistem Penggerak", tanggal: "14/04/2025" },
-      ];
-
-      const kursusContainer = document.getElementById("daftarKursus");
-      const kuisContainer = document.getElementById("daftarHasilKuis");
-
-      kursusList.forEach((item, index) => {
-        kursusContainer.innerHTML += `
-          <div class="border rounded-lg p-4 shadow-sm">
-            <div class="relative h-24 bg-gray-100 rounded mb-3">
-              <span class="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full">#${index + 1}</span>
-            </div>
-            <h3 class="font-semibold text-sm mb-2">${item.judul}</h3>
-            <div class="text-xs text-gray-600 mb-2">
-              📄 ${item.materi} Materi &nbsp;&nbsp; 📊 ${item.kuis} Kuis
-            </div>
-            <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Lihat</button>
-          </div>
-        `;
-      });
-
-      hasilKuisList.forEach((item) => {
-        kuisContainer.innerHTML += `
-          <div class="border rounded-lg p-4 text-center shadow-sm">
-            <div class="text-2xl font-bold mb-1">${item.nilai}<span class="text-sm font-normal">/100</span></div>
-            <p class="text-sm font-medium mb-1">${item.judul}</p>
-            <p class="text-xs text-gray-500 mb-2">📅 ${item.tanggal}</p>
-            <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Review</button>
-          </div>
-        `;
-      });
-    </script>
-
-      <!-- Kartu Kursus -->
-      <h3 class="text-lg font-bold mb-2">Kursus</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <?php
-        $kursus = [
-          ["judul" => "Pengenalan Sepeda", "materi" => 3, "kuis" => 1],
-          ["judul" => "Sistem Penggerak", "materi" => 4, "kuis" => 2],
-          ["judul" => "Sistem Pengereman dan Keselamatan", "materi" => 3, "kuis" => 1],
-          ["judul" => "Sistem Suspensi dan Kenyamanan Berkendara", "materi" => 2, "kuis" => 1],
+      <script>
+        const kursusList = [
+          { judul: "Pengenalan Sepeda", materi: 3, kuis: 1 },
+          { judul: "Sistem Penggerak", materi: 4, kuis: 2 },
+          { judul: "Sistem Pengereman dan Keselamatan", materi: 3, kuis: 1 },
+          { judul: "Sistem Suspensi dan Kenyamanan Berkendara", materi: 2, kuis: 1 },
         ];
-        $no = 1;
-        foreach ($kursus as $k) {
-          echo "
-            <div class='bg-white p-4 rounded-lg shadow'>
-              <div class='text-sm text-right mb-1'>#{$no}</div>
-              <h4 class='font-bold mb-2'>{$k['judul']}</h4>
-              <p class='text-sm text-gray-500'>📄 {$k['materi']} Materi</p>
-              <p class='text-sm text-gray-500'>🧪 {$k['kuis']} Kuis</p>
-              <button class='mt-2 bg-blue-700 text-white px-4 py-1 rounded'>Lihat</button>
-            </div>
-          ";
-          $no++;
-        }
-        ?>
-      </div>
 
-      <!-- Hasil Kuis -->
-      <h3 class="text-lg font-bold mb-2">Hasil Kuis Kamu</h3>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <?php
-        $kuis = [
-          ["judul" => "Anatomi Sepeda", "skor" => 80, "tanggal" => "06/04/2025"],
-          ["judul" => "Sistem Penggerak", "skor" => 85, "tanggal" => "06/04/2025"],
-          ["judul" => "Rantai dan Pemeliharaannya", "skor" => 80, "tanggal" => "07/04/2025"],
-          ["judul" => "Sistem Pengereman dan Keselamatan", "skor" => 90, "tanggal" => "08/04/2025"],
+        const hasilKuisList = [
+          { nilai: 80, judul: "Anatomi Sepeda", tanggal: "06/04/2025" },
+          { nilai: 90, judul: "Rem dan Keselamatan", tanggal: "09/04/2025" },
+          { nilai: 75, judul: "Suspensi", tanggal: "12/04/2025" },
+          { nilai: 88, judul: "Sistem Penggerak", tanggal: "14/04/2025" },
         ];
-        foreach ($kuis as $k) {
-          echo "
-            <div class='bg-white p-4 rounded-lg shadow'>
-              <div class='text-xl font-bold'>{$k['skor']}/100</div>
-              <p class='text-sm'>{$k['judul']}</p>
-              <p class='text-xs text-gray-500'>{$k['tanggal']}</p>
-              <button class='mt-2 bg-blue-700 text-white px-4 py-1 rounded'>Review</button>
+
+        const kursusContainer = document.getElementById("daftarKursus");
+        const kuisContainer = document.getElementById("daftarHasilKuis");
+
+        kursusList.forEach((item, index) => {
+          kursusContainer.innerHTML += `
+            <div class="border rounded-lg p-4 shadow-sm">
+              <div class="relative h-24 bg-gray-100 rounded mb-3">
+                <span class="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full">#${index + 1}</span>
+              </div>
+              <h3 class="font-semibold text-sm mb-2">${item.judul}</h3>
+              <div class="text-xs text-gray-600 mb-2">
+                📄 ${item.materi} Materi &nbsp;&nbsp; 📊 ${item.kuis} Kuis
+              </div>
+              <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Lihat</button>
             </div>
-          ";
-        }
-        ?>
-      </div>
+          `;
+        });
+
+        hasilKuisList.forEach((item) => {
+          kuisContainer.innerHTML += `
+            <div class="border rounded-lg p-4 text-center shadow-sm">
+              <div class="text-2xl font-bold mb-1">${item.nilai}<span class="text-sm font-normal">/100</span></div>
+              <p class="text-sm font-medium mb-1">${item.judul}</p>
+              <p class="text-xs text-gray-500 mb-2">📅 ${item.tanggal}</p>
+              <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Review</button>
+            </div>
+          `;
+        });
+      </script>
     </main>
   </div>
 </body>
