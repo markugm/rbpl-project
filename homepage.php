@@ -42,6 +42,10 @@
       <!-- TOP BAR -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
         <div class="flex items-center gap-4 ml-auto">
+          <!-- Kiri: Hamburger Menu -->
+          <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+          </button>
           <!-- Tombol Megaphone -->
           <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
             <i class="bi bi-megaphone"></i>
