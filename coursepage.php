@@ -74,29 +74,29 @@
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             <script>
                 const kursusList = [
-                    {
-                    judul: "Pengenalan Sepeda",
-                    deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda",
-                    materi: 3,
-                    kuis: 1
+                    { 
+                        judul: "Pengenalan Sepeda",
+                        deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda",
+                        materi: 3,
+                        kuis: 1
                     },
                     {
-                    judul: "Sistem Penggerak",
-                    deskripsi: "Gear, Rantai, dan Efisiensi Penggerak Sepeda",
-                    materi: 4,
-                    kuis: 2
+                        judul: "Sistem Penggerak",
+                        deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter",
+                        materi: 4,
+                        kuis: 2
                     },
                     {
-                    judul: "Sistem Pengereman dan Keselamatan",
-                    deskripsi: "Jenis Rem, Teknik Pengereman, dan Aturan Jalan",
-                    materi: 3,
-                    kuis: 1
+                        judul: "Sistem Pengereman dan Keselamatan",
+                        deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem • Aksesoris Keselamatan",
+                        materi: 3,
+                        kuis: 1
                     },
                     {
-                    judul: "Sistem Suspensi dan Kenyamanan Berkendara",
-                    deskripsi: "Suspensi Depan, Belakang, dan Tips Berkendara Nyaman",
-                    materi: 2,
-                    kuis: 1
+                        judul: "Sistem Suspensi dan Kenyamanan Berkendara",
+                        deskripsi: "Suspensi Depan, Belakang, dan Tips Berkendara Nyaman",
+                        materi: 2,
+                        kuis: 1
                     }
                 ];
 
