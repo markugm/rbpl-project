@@ -66,7 +66,7 @@
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
             <div class="flex gap-2 mb-6">
-                <button id="btnSemua" class="pb-1 mr-6">Semua</button>
+                <button id="btnSemua" class="pb-1">Semua</button>
                 <button id="btnTuntas" class="pb-1">Tuntas</button>
             </div>
 
@@ -74,12 +74,12 @@
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             <script>
                 const kursusList = [
-                    { judul: "Pengenalan Sepeda", deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", materi: 3, kuis: 1, tuntas: true },
-                    { judul: "Sistem Penggerak", deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", materi: 4, kuis: 2, tuntas: true },
-                    { judul: "Sistem Pengereman dan Keselamatan", deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem", materi: 3, kuis: 1, tuntas: true },
-                    { judul: "Sistem Suspensi dan Kenyamanan Berkendara", deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman", materi: 2, kuis: 1, tuntas: true },
-                    { judul: "Roda dan Ban Sepeda", deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara", materi: 2, kuis: 1, tuntas: true },
-                    { judul: "Pengenalan Dasar Manajemen Stok dan Produk", deskripsi: "Pengecekan Stok Sepeda", materi: 2, kuis: 1, tuntas: true },
+                    { judul: "Pengenalan Sepeda", deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", materi: 3, kuis: 1, tuntas: true, materiTuntas: 3 },
+                    { judul: "Sistem Penggerak", deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", materi: 4, kuis: 2, tuntas: true, materiTuntas: 2 },
+                    { judul: "Sistem Pengereman dan Keselamatan", deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem", materi: 3, kuis: 1, tuntas: true, materiTuntas: 1 },
+                    { judul: "Sistem Suspensi dan Kenyamanan Berkendara", deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman", materi: 2, kuis: 1, tuntas: false, materiTuntas: 0 },
+                    { judul: "Roda dan Ban Sepeda", deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara", materi: 2, kuis: 1, tuntas: false, materiTuntas: 0 },
+                    { judul: "Pengenalan Dasar Manajemen Stok dan Produk", deskripsi: "Pengecekan Stok Sepeda", materi: 2, kuis: 1, tuntas: false, materiTuntas: 0 },
                 ];
 
                 const btnSemua = document.getElementById('btnSemua');
@@ -89,10 +89,17 @@
                 function renderKursus(filter) {
                     daftarKursus.innerHTML = '';
                     kursusList
-                        .filter(k => (filter === 'tuntas' ? k.tuntas : true))
+                        .filter(k => {
+                            if(filter === 'tuntas') {
+                                // Tampilkan kursus yang sudah ada materi dituntaskan (materiTuntas > 0)
+                                return k.materiTuntas > 0;
+                            }
+                            return true;
+                        })
                         .forEach((item, index) => {
+                            const isTuntasFilter = filter === 'tuntas';
                             daftarKursus.innerHTML += `
-                                <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px]">
+                                <div class="rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px] ${isTuntasFilter ? 'bg-gray-200 text-gray-600' : 'bg-gray-100'}">
                                     <div class="flex gap-4 flex-1">
                                         <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
                                             <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
@@ -100,10 +107,14 @@
                                         <div class="flex-1 flex flex-col justify-between overflow-hidden">
                                             <div class="overflow-hidden">
                                                 <h3 class="font-semibold text-sm mb-1 truncate w-full">${item.judul}</h3>
-                                                <p class="text-xs text-gray-600 leading-snug mb-2 line-clamp-2">${item.deskripsi}</p>
-                                                <p class="text-xs text-gray-500">${item.materi} Materi | ${item.kuis} Kuis</p>
+                                                <p class="text-xs leading-snug mb-2 line-clamp-2">${item.deskripsi}</p>
+                                                <p class="text-xs ${isTuntasFilter ? 'text-gray-500' : 'text-gray-500'}">
+                                                    ${isTuntasFilter ? `${item.materiTuntas} dari ${item.materi} Materi Dituntaskan` : `${item.materi} Materi | ${item.kuis} Kuis`}
+                                                </p>
                                             </div>
-                                            <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition mt-2 w-fit">Mulai</button>
+                                            <button class="${isTuntasFilter ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" ${isTuntasFilter ? 'disabled' : ''}>
+                                                Mulai
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +122,6 @@
                         });
                 }
 
-                // Fungsi untuk update style tab
                 function setTab(active) {
                     if(active === 'semua') {
                         btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
@@ -139,6 +149,11 @@
                 // Inisialisasi awal
                 setTab('semua');
                 renderKursus('semua');
+
+                // Optional: fungsi toggleSidebar() jika dibutuhkan
+                function toggleSidebar() {
+                    // Implementasi toggle sidebar jika ada
+                }
             </script>
 
         </div>
