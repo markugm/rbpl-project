@@ -65,7 +65,7 @@
         <!-- KONTEN KURSUS -->
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
-            <div class="flex gap-6 mb-6">
+            <div class="flex gap-2 mb-6">
                 <button id="btnSemua" class="pb-1 mr-6">Semua</button>
                 <button id="btnTuntas" class="pb-1">Tuntas</button>
             </div>
