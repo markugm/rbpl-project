@@ -115,7 +115,7 @@
                 const kursusContainer = document.getElementById("daftarKursus");
                 kursusList.forEach((item, index) => {
                     kursusContainer.innerHTML += `
-                        <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[100px]">
+                        <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[150px]">
                             <div class="flex gap-4 flex-1">
                                 <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
                                     <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
