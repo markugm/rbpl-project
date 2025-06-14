@@ -66,7 +66,7 @@
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
             <div class="flex gap-6 mb-6">
-                <button id="btnSemua" class="font-semibold border-b-2 border-black pb-1">Semua</button>
+                <button id="btnSemua" class="font-bold border-b-2 border-black pb-1">Semua</button>
                 <button id="btnTuntas" class="text-gray-400">Tuntas</button>
             </div>
 
