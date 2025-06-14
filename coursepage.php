@@ -122,7 +122,7 @@
                                 </div>
                                 <div class="flex-1 flex flex-col justify-between">
                                     <div>
-                                    <h3 class="font-semibold text-sm mb-1 truncate w-full">${item.judul}</h3>
+                                    <h3 class="font-semibold text-sm mb-1">${item.judul}</h3>
                                     <p class="text-xs text-gray-600 leading-snug mb-2">${item.deskripsi}</p>
                                     <p class="text-xs text-gray-500">${item.materi} Materi | ${item.kuis} Kuis</p>
                                     </div>
