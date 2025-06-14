@@ -66,8 +66,8 @@
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
             <div class="flex gap-6 mb-6">
-                <button id="btnSemua" class="font-semibold border-b-2 border-black pb-1">Semua</button>
-                <button id="btnTuntas" class="text-gray-400">Tuntas</button>
+                <button id="btnSemua" class="pb-1 mr-6">Semua</button>
+                <button id="btnTuntas" class="pb-1">Tuntas</button>
             </div>
 
             <!-- Cards -->
@@ -111,20 +111,33 @@
                         });
                 }
 
+                // Fungsi untuk update style tab
+                function setTab(active) {
+                    if(active === 'semua') {
+                        btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnSemua.classList.remove('text-gray-400');
+                        btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnTuntas.classList.add('text-gray-400');
+                    } else {
+                        btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnTuntas.classList.remove('text-gray-400');
+                        btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnSemua.classList.add('text-gray-400');
+                    }
+                }
+
                 btnSemua.onclick = () => {
-                    btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black');
-                    btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black');
-                    btnTuntas.classList.add('text-gray-400');
+                    setTab('semua');
                     renderKursus('semua');
                 };
 
                 btnTuntas.onclick = () => {
-                    btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black');
-                    btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black');
-                    btnSemua.classList.add('text-gray-400');
+                    setTab('tuntas');
                     renderKursus('tuntas');
                 };
 
+                // Inisialisasi awal
+                setTab('semua');
                 renderKursus('semua');
             </script>
 
