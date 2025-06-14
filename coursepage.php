@@ -66,73 +66,69 @@
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
             <div class="flex gap-6 mb-6">
-                <button class="font-semibold border-b-2 border-black pb-1">Semua</button>
-                <button class="text-gray-400">Tuntas</button>
+                <button id="btnSemua" class="font-semibold border-b-2 border-black pb-1">Semua</button>
+                <button id="btnTuntas" class="text-gray-400">Tuntas</button>
             </div>
 
             <!-- Cards -->
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             <script>
                 const kursusList = [
-                    { 
-                        judul: "Pengenalan Sepeda",
-                        deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda",
-                        materi: 3,
-                        kuis: 1
-                    },
-                    {
-                        judul: "Sistem Penggerak",
-                        deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter",
-                        materi: 4,
-                        kuis: 2
-                    },
-                    {
-                        judul: "Sistem Pengereman dan Keselamatan",
-                        deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem",
-                        materi: 3,
-                        kuis: 1
-                    },
-                    {
-                        judul: "Sistem Suspensi dan Kenyamanan Berkendara",
-                        deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman",
-                        materi: 2,
-                        kuis: 1
-                    },
-                    {
-                        judul: "Roda dan Ban Sepeda",
-                        deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara",
-                        materi: 2,
-                        kuis: 1
-                    },
-                    {
-                        judul: "Pengenalan Dasar Manajemen Stok dan Produk",
-                        deskripsi: "Pengecekan Stok Sepeda",
-                        materi: 2,
-                        kuis: 1
-                    }
+                    { judul: "Pengenalan Sepeda", deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", materi: 3, kuis: 1, tuntas: true },
+                    { judul: "Sistem Penggerak", deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", materi: 4, kuis: 2, tuntas: true },
+                    { judul: "Sistem Pengereman dan Keselamatan", deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem", materi: 3, kuis: 1, tuntas: true },
+                    { judul: "Sistem Suspensi dan Kenyamanan Berkendara", deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman", materi: 2, kuis: 1, tuntas: true },
+                    { judul: "Roda dan Ban Sepeda", deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara", materi: 2, kuis: 1, tuntas: true },
+                    { judul: "Pengenalan Dasar Manajemen Stok dan Produk", deskripsi: "Pengecekan Stok Sepeda", materi: 2, kuis: 1, tuntas: true },
                 ];
 
-                const kursusContainer = document.getElementById("daftarKursus");
-                kursusList.forEach((item, index) => {
-                    kursusContainer.innerHTML += `
-                        <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px]">
-                            <div class="flex gap-4 flex-1">
-                                <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
-                                    <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-between">
-                                    <div>
-                                    <h3 class="font-semibold text-sm mb-1">${item.judul}</h3>
-                                    <p class="text-xs text-gray-600 leading-snug mb-2">${item.deskripsi}</p>
-                                    <p class="text-xs text-gray-500">${item.materi} Materi | ${item.kuis} Kuis</p>
+                const btnSemua = document.getElementById('btnSemua');
+                const btnTuntas = document.getElementById('btnTuntas');
+                const daftarKursus = document.getElementById('daftarKursus');
+
+                function renderKursus(filter) {
+                    daftarKursus.innerHTML = '';
+                    kursusList
+                        .filter(k => (filter === 'tuntas' ? k.tuntas : true))
+                        .forEach((item, index) => {
+                            daftarKursus.innerHTML += `
+                                <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px]">
+                                    <div class="flex gap-4 flex-1">
+                                        <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
+                                            <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-between overflow-hidden">
+                                            <div class="overflow-hidden">
+                                                <h3 class="font-semibold text-sm mb-1 truncate w-full">${item.judul}</h3>
+                                                <p class="text-xs text-gray-600 leading-snug mb-2 line-clamp-2">${item.deskripsi}</p>
+                                                <p class="text-xs text-gray-500">${item.materi} Materi | ${item.kuis} Kuis</p>
+                                            </div>
+                                            <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition mt-2 w-fit">Mulai</button>
+                                        </div>
                                     </div>
-                                    <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition mt-2 w-fit">Mulai</button>
                                 </div>
-                            </div>
-                        </div>
-                    `;
-                });
+                            `;
+                        });
+                }
+
+                btnSemua.onclick = () => {
+                    btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black');
+                    btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black');
+                    btnTuntas.classList.add('text-gray-400');
+                    renderKursus('semua');
+                };
+
+                btnTuntas.onclick = () => {
+                    btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black');
+                    btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black');
+                    btnSemua.classList.add('text-gray-400');
+                    renderKursus('tuntas');
+                };
+
+                renderKursus('semua');
             </script>
 
         </div>
     </main>
+</body>
+</html>
