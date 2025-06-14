@@ -164,16 +164,19 @@
                 }
 
                 function setTab(active) {
-                    if(active === 'semua') {
-                        btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnSemua.classList.remove('text-gray-400');
-                        btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnTuntas.classList.add('text-gray-400');
+                    const activeClass = ['text-blue-800', 'border-blue-800', 'font-semibold'];
+                    const inactiveClass = ['text-gray-600', 'border-transparent', 'font-medium'];
+
+                    if (active === 'semua') {
+                        btnSemua.classList.add(...activeClass);
+                        btnSemua.classList.remove(...inactiveClass);
+                        btnTuntas.classList.remove(...activeClass);
+                        btnTuntas.classList.add(...inactiveClass);
                     } else {
-                        btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnTuntas.classList.remove('text-gray-400');
-                        btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnSemua.classList.add('text-gray-400');
+                        btnTuntas.classList.add(...activeClass);
+                        btnTuntas.classList.remove(...inactiveClass);
+                        btnSemua.classList.remove(...activeClass);
+                        btnSemua.classList.add(...inactiveClass);
                     }
                 }
 
