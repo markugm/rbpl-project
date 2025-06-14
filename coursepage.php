@@ -38,7 +38,7 @@
         </aside>
 
     <!-- Konten Utama -->
-    <main class="flex-1 overflow-y-auto">
+    <main class="flex-1 overflow-y-auto relative">
         <!-- TOP BAR -->
         <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
             <!-- Kiri: Hamburger Menu -->
@@ -61,7 +61,48 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Side Panel Detail Kursus -->
+        <div id="panelDetail" class="fixed right-0 top-0 h-full w-[400px] bg-white shadow-xl p-6 transition-transform transform translate-x-full z-50">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-bold text-lg" id="judulDetail">Judul Kursus</h3>
+                <button onclick="tutupPanel()"><i class="bi bi-x text-xl"></i></button>
+            </div>
+            <ol class="space-y-6 text-sm">
+                <li class="flex items-start gap-4">
+                    <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">1</span>
+                    <div>
+                        <p class="font-semibold">Video</p>
+                        <p>Suspensi Depan dan Belakang</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">2</span>
+                    <div>
+                        <p class="font-semibold">Video</p>
+                        <p>Sadel dan Seatspots</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">3</span>
+                    <div>
+                        <p class="font-semibold">Dokumen</p>
+                        <p>Sadel dan Seatspots</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">4</span>
+                    <div>
+                        <p class="font-semibold">Kuis</p>
+                        <p>Sistem Suspensi dan Kenyamanan Berkendara</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlayDetail" class="fixed inset-0 bg-black/30 z-40 hidden" onclick="tutupPanel()"></div>
+
         <!-- KONTEN KURSUS -->
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
@@ -91,7 +132,6 @@
                     kursusList
                         .filter(k => {
                             if(filter === 'tuntas') {
-                                // Tampilkan kursus yang sudah ada materi dituntaskan (materiTuntas > 0)
                                 return k.materiTuntas > 0;
                             }
                             return true;
@@ -112,7 +152,7 @@
                                                     ${isTuntasFilter ? `${item.materiTuntas} dari ${item.materi} Materi Dituntaskan` : `${item.materi} Materi | ${item.kuis} Kuis`}
                                                 </p>
                                             </div>
-                                            <button class="${isTuntasFilter ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" ${isTuntasFilter ? 'disabled' : ''}>
+                                            <button onclick="bukaPanel('${item.judul}')" class="${isTuntasFilter ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" ${isTuntasFilter ? 'disabled' : ''}>
                                                 Mulai
                                             </button>
                                         </div>
@@ -146,17 +186,27 @@
                     renderKursus('tuntas');
                 };
 
+                function bukaPanel(judul) {
+                    document.getElementById('judulDetail').textContent = judul;
+                    document.getElementById('panelDetail').classList.remove('translate-x-full');
+                    document.getElementById('overlayDetail').classList.remove('hidden');
+                }
+
+                function tutupPanel() {
+                    document.getElementById('panelDetail').classList.add('translate-x-full');
+                    document.getElementById('overlayDetail').classList.add('hidden');
+                }
+
                 // Inisialisasi awal
                 setTab('semua');
                 renderKursus('semua');
 
-                // Optional: fungsi toggleSidebar() jika dibutuhkan
                 function toggleSidebar() {
-                    // Implementasi toggle sidebar jika ada
+                    alert('Sidebar toggle logic bisa ditambahkan di sini');
                 }
             </script>
-
         </div>
     </main>
+</div>
 </body>
 </html>
