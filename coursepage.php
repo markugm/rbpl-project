@@ -115,18 +115,18 @@
                 const kursusContainer = document.getElementById("daftarKursus");
                 kursusList.forEach((item, index) => {
                     kursusContainer.innerHTML += `
-                        <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex gap-4 items-start min-h-[240px]">
+                        <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[200px]">
+                            <div class="flex gap-4 flex-1">
                             <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
-                            <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
+                                <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
                             </div>
                             <div class="flex-1 flex flex-col justify-between">
-                            <div>
+                                <div>
                                 <h3 class="font-semibold text-sm mb-1">${item.judul}</h3>
                                 <p class="text-xs text-gray-600 leading-snug mb-2">${item.deskripsi}</p>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 mb-2">${item.materi} Materi | ${item.kuis} Kuis</p>
-                                <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition">Mulai</button>
+                                <p class="text-xs text-gray-500">${item.materi} Materi | ${item.kuis} Kuis</p>
+                                </div>
+                                <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition mt-2 w-fit">Mulai</button>
                             </div>
                             </div>
                         </div>
