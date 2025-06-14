@@ -70,69 +70,65 @@
                 <button class="text-gray-400">Tuntas</button>
             </div>
 
-        <!-- Cards -->
-        <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <!-- Cards -->
+            <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <script>
+                const kursusList = [
+                    { 
+                        judul: "Pengenalan Sepeda",
+                        deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda",
+                        materi: 3,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Sistem Penggerak",
+                        deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter",
+                        materi: 4,
+                        kuis: 2
+                    },
+                    {
+                        judul: "Sistem Pengereman dan Keselamatan",
+                        deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem • Aksesoris Keselamatan",
+                        materi: 3,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Sistem Suspensi dan Kenyamanan Berkendara",
+                        deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman",
+                        materi: 2,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Roda dan Ban Sepeda",
+                        deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara",
+                        materi: 2,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Pengenalan Dasar Manajemen Stok dan Produk",
+                        deskripsi: "Pengecekan Stok Sepeda",
+                        materi: 2,
+                        kuis: 1
+                    }
+                ];
 
-        <script>
-            const kursusList = [
-                { 
-                    judul: "Pengenalan Sepeda",
-                    deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda",
-                    materi: 3,
-                    kuis: 1
-                },
-                {
-                    judul: "Sistem Penggerak",
-                    deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter",
-                    materi: 4,
-                    kuis: 2
-                },
-                {
-                    judul: "Sistem Pengereman dan Keselamatan",
-                    deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem • Aksesoris Keselamatan",
-                    materi: 3,
-                    kuis: 1
-                },
-                {
-                    judul: "Sistem Suspensi dan Kenyamanan Berkendara",
-                    deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman",
-                    materi: 2,
-                    kuis: 1
-                },
-                {
-                    judul: "Roda dan Ban Sepeda",
-                    deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara",
-                    materi: 2,
-                    kuis: 1
-                },
-                {
-                    judul: "Pengenalan Dasar Manajemen Stok dan Produk",
-                    deskripsi: "Pengecekan Stok Sepeda",
-                    materi: 2,
-                    kuis: 1
-                }
-            ];
-
-            const kursusContainer = document.getElementById("daftarKursus");
-            kursusList.forEach((item, index) => {
-                kursusContainer.innerHTML += `
-                <div class="bg-gray-100 rounded-xl shadow px-4 py-3 min-h-[220px] flex gap-4 items-start">
-                    <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
+                const kursusContainer = document.getElementById("daftarKursus");
+                kursusList.forEach((item, index) => {
+                    kursusContainer.innerHTML += `
+                    <div class="bg-gray-100 rounded-xl shadow px-4 py-3 flex gap-4 items-start">
+                        <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
                         <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-semibold text-sm mb-1">${item.judul}</h3>
-                            <p class="text-xs text-gray-600 leading-snug mb-2">${item.deskripsi}</p>
-                            <p class="text-xs text-gray-500 mb-2">${item.materi} Materi | ${item.kuis} Kuis</p>
                         </div>
-                        <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition mt-auto w-fit">Mulai</button>
+                        <div class="flex-1">
+                        <h3 class="font-semibold text-sm mb-1">${item.judul}</h3>
+                        <p class="text-xs text-gray-600 leading-snug mb-2">${item.deskripsi}</p>
+                        <p class="text-xs text-gray-500 mb-2">${item.materi} Materi | ${item.kuis} Kuis</p>
+                        <button class="bg-blue-900 text-white text-sm px-4 py-1 rounded hover:bg-blue-800 transition">Mulai</button>
+                        </div>
                     </div>
-                </div>
-                `;
-            });
-        </script>
-
+                    `;
+                });
+            </script>
 
         </div>
     </main>
