@@ -106,10 +106,11 @@
         <!-- KONTEN KURSUS -->
         <div class="px-6 py-6">
             <h2 class="text-2xl font-bold mb-4">Kursus</h2>
-            <div class="flex gap-4 mb-6">
-                <button id="btnSemua" class="pb-1">Semua</button>
-                <button id="btnTuntas" class="pb-1">Tuntas</button>
+            <div class="flex gap-4 mb-6 border-b border-gray-300">
+                <button id="btnSemua" class="pb-2 px-4 text-sm font-medium text-gray-600 hover:text-blue-800 border-b-2 border-transparent focus:outline-none transition">Semua</button>
+                <button id="btnTuntas" class="pb-2 px-4 text-sm font-medium text-gray-600 hover:text-blue-800 border-b-2 border-transparent focus:outline-none transition">Tuntas</button>
             </div>
+
 
             <!-- Cards -->
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
