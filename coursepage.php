@@ -94,7 +94,19 @@
                     },
                     {
                         judul: "Sistem Suspensi dan Kenyamanan Berkendara",
-                        deskripsi: "Suspensi Depan, Belakang, dan Tips Berkendara Nyaman",
+                        deskripsi: "Suspensi Depan dan Belakang • Tips Berkendara Nyaman",
+                        materi: 2,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Roda dan Ban Sepeda",
+                        deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara",
+                        materi: 2,
+                        kuis: 1
+                    },
+                    {
+                        judul: "Pengenalan Dasar Manajemen Stok dan Produk",
+                        deskripsi: "Pengecekan Stok Sepeda",
                         materi: 2,
                         kuis: 1
                     }
