@@ -113,14 +113,14 @@
 
                 btnSemua.onclick = () => {
                     btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black');
-                    btnTuntas.classList.remove('font-bold', 'border-b-2', 'border-black');
+                    btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black');
                     btnTuntas.classList.add('text-gray-400');
                     renderKursus('semua');
                 };
 
                 btnTuntas.onclick = () => {
                     btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black');
-                    btnSemua.classList.remove('font-bold', 'border-b-2', 'border-black');
+                    btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black');
                     btnSemua.classList.add('text-gray-400');
                     renderKursus('tuntas');
                 };
