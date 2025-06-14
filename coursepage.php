@@ -88,7 +88,7 @@
                     },
                     {
                         judul: "Sistem Pengereman dan Keselamatan",
-                        deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem • Aksesoris Keselamatan",
+                        deskripsi: "Jenis-jenis Rem • Cara Kerja dan Perawatan Rem",
                         materi: 3,
                         kuis: 1
                     },
