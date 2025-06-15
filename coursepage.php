@@ -163,7 +163,7 @@
                             },
                             { 
                                 type: "kuis", 
-                                judul: "Kuis Sistem Suspensi", 
+                                judul: "Kuis Sistem Suspensi dan Kenyamanan Berkendara", 
                                 questions: [] 
                             }
                         ]
@@ -183,12 +183,41 @@
                             },
                             { 
                                 type: "dokumen", 
-                                judul: "Panduan Perawatan Rantai", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
                                 content: "perawatan_rantai.pdf" 
+                            },
+                            { 
+                                type: "kuis", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
+                                questions: [] 
                             }
                         ]
                     },
-                    
+                    { 
+                        judul: "Roda dan Ban Sepeda", 
+                        deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara • Perawatan Roda", 
+                        materi: 3, 
+                        kuis: 1, 
+                        tuntas: false, 
+                        materiTuntas: 0,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Wheelset dan Hubs", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_6" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Ban dan Tekanan Udara", 
+                                content: "panduan_perawatan.pdf" 
+                            },
+                            { 
+                                type: "kuis", 
+                                judul: "Kuis Roda dan Ban Sepeda", 
+                                questions: [] 
+                            }
+                        ]
+                    }
                 ];
 
                 const btnSemua = document.getElementById('btnSemua');
