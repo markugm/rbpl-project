@@ -122,7 +122,7 @@
                         judul: "Sistem Penggerak", 
                         deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", 
                         materi: 4, 
-                        kuis: 2, 
+                        kuis: 1, 
                         tuntas: true, 
                         materiTuntas: 2,
                         materiDetail: [
@@ -167,7 +167,28 @@
                                 questions: [] 
                             }
                         ]
-                    }
+                    },
+                    { 
+                        judul: "Sistem Pengereman dan Keselamatan", 
+                        deskripsi: "Jenis-jenis Rem Sepeda • Cara Kerja dan Perawatan Rem • Aksesori Keselamatan", 
+                        materi: 4, 
+                        kuis: 1, 
+                        tuntas: true, 
+                        materiTuntas: 2,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_3" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Panduan Perawatan Rantai", 
+                                content: "perawatan_rantai.pdf" 
+                            }
+                        ]
+                    },
+                    
                 ];
 
                 const btnSemua = document.getElementById('btnSemua');
