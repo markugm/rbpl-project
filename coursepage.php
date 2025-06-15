@@ -141,7 +141,7 @@
                     { 
                         judul: "Sistem Suspensi dan Kenyamanan Berkendara", 
                         deskripsi: "Suspensi Depan dan Belakang • Sadel dan Seatposts", 
-                        materi: 2, 
+                        materi: 3, 
                         kuis: 1, 
                         tuntas: false, 
                         materiTuntas: 0,
