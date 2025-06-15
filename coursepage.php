@@ -87,211 +87,124 @@
             <!-- Cards -->
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             <script>
-                const kursusList = [
-                    { 
-                        judul: "Pengenalan Sepeda", 
-                        deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", 
-                        materi: 3, 
-                        kuis: 1, 
-                        tuntas: true, 
-                        materiTuntas: 3,
-                        materiDetail: [
-                            { 
-                                type: "video", 
-                                judul: "Pengenalan Sepeda", 
-                                content: "https://www.youtube.com/embed/VIDEO_ID_1" 
-                            },
-                            { 
-                                type: "video", 
-                                judul: "Anatomi Sepeda", 
-                                content: "https://www.youtube.com/embed/VIDEO_ID_2" 
-                            },
-                            { 
-                                type: "dokumen", 
-                                judul: "Panduan Ukuran Sepeda", 
-                                content: "panduan_ukuran.pdf" 
-                            },
-                            { 
-                                type: "kuis", 
-                                judul: "Kuis Pengenalan Sepeda", 
-                                questions: [] 
-                            }
-                        ]
-                    },
-                    { 
-                        judul: "Sistem Penggerak", 
-                        deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", 
-                        materi: 4, 
-                        kuis: 2, 
-                        tuntas: true, 
-                        materiTuntas: 2,
-                        materiDetail: [
-                            { 
-                                type: "video", 
-                                judul: "Sistem Penggerak", 
-                                content: "https://www.youtube.com/embed/VIDEO_ID_3" 
-                            },
-                            { 
-                                type: "dokumen", 
-                                judul: "Panduan Perawatan Rantai", 
-                                content: "perawatan_rantai.pdf" 
-                            }
-                        ]
-                    },
-                    { 
-                        judul: "Sistem Suspensi dan Kenyamanan Berkendara", 
-                        deskripsi: "Suspensi Depan dan Belakang • Sadel dan Seatposts", 
-                        materi: 2, 
-                        kuis: 1, 
-                        tuntas: false, 
-                        materiTuntas: 0,
-                        materiDetail: [
-                            { 
-                                type: "video", 
-                                judul: "Suspensi Depan dan Belakang", 
-                                content: "https://www.youtube.com/embed/VIDEO_ID_4" 
-                            },
-                            { 
-                                type: "video", 
-                                judul: "Sadel dan Seatposts", 
-                                content: "https://www.youtube.com/embed/VIDEO_ID_5" 
-                            },
-                            { 
-                                type: "dokumen", 
-                                judul: "Panduan Sadel", 
-                                content: "panduan_sadel.pdf" 
-                            },
-                            { 
-                                type: "kuis", 
-                                judul: "Kuis Sistem Suspensi", 
-                                questions: [] 
-                            }
-                        ]
-                    }
-                ];
+            const kursusList = [
+                { 
+                    judul: "Pengenalan Sepeda", 
+                    deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", 
+                    materi: 3, 
+                    kuis: 1, 
+                    tuntas: true, 
+                    materiTuntas: 3,
+                    materiDetail: [
+                        { type: "video", judul: "Pengenalan Sepeda", content: "https://youtube.com/embed/abc123" },
+                        { type: "dokumen", judul: "Panduan Ukuran", content: "panduan.pdf" },
+                        { type: "kuis", judul: "Kuis Pengenalan", questions: [] }
+                    ]
+                },
+                { 
+                    judul: "Sistem Suspensi", 
+                    deskripsi: "Suspensi Depan dan Belakang • Sadel dan Seatposts", 
+                    materi: 2, 
+                    kuis: 1, 
+                    tuntas: false, 
+                    materiTuntas: 0,
+                    materiDetail: [
+                        { type: "video", judul: "Video Suspensi", content: "https://youtube.com/embed/xyz456" },
+                        { type: "dokumen", judul: "Panduan Sadel", content: "sadel.pdf" }
+                    ]
+                }
+                // Data lainnya...
+            ];
 
-                const btnSemua = document.getElementById('btnSemua');
-                const btnTuntas = document.getElementById('btnTuntas');
-                const daftarKursus = document.getElementById('daftarKursus');
-                const materiList = document.getElementById('materiList');
+            function renderKursus(filter) {
+                daftarKursus.innerHTML = ''; // Kosongkan container
+                
+                // Filter kursus berdasarkan tab yang aktif
+                const filteredKursus = kursusList.filter(k => {
+                    return filter === 'tuntas' ? k.materiTuntas > 0 : true;
+                });
 
-                function renderKursus(filter) {
-                    daftarKursus.innerHTML = '';
-                    kursusList
-                        .filter(k => {
-                            if(filter === 'tuntas') {
-                                return k.materiTuntas > 0;
-                            }
-                            return true;
-                        })
-                        .forEach((item, index) => {
-                            const isTuntasFilter = filter === 'tuntas';
-                            daftarKursus.innerHTML += `
-                                <div class="rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px] ${isTuntasFilter ? 'bg-gray-200 text-gray-600' : 'bg-gray-100'}">
-                                    <div class="flex gap-4 flex-1">
-                                        <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
-                                            <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
-                                        </div>
-                                        <div class="flex-1 flex flex-col justify-between overflow-hidden">
-                                            <div class="overflow-hidden">
-                                                <h3 class="font-semibold text-sm mb-1 truncate w-full">${item.judul}</h3>
-                                                <p class="text-xs leading-snug mb-2 line-clamp-2">${item.deskripsi}</p>
-                                                <p class="text-xs ${isTuntasFilter ? 'text-gray-500' : 'text-gray-500'}">
-                                                    ${isTuntasFilter ? `${item.materiTuntas} dari ${item.materi} Materi Dituntaskan` : `${item.materi} Materi | ${item.kuis} Kuis`}
-                                                </p>
-                                            </div>
-                                            <button onclick="bukaPanel('${item.judul}', ${index})" class="${isTuntasFilter ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" ${isTuntasFilter ? 'disabled' : ''}>
-                                                Mulai
-                                            </button>
-                                        </div>
-                                    </div>
+                // Buat card untuk setiap kursus
+                filteredKursus.forEach((kursus, index) => {
+                    const card = document.createElement('div');
+                    card.className = `rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px] ${
+                        kursus.tuntas ? 'bg-gray-200 text-gray-600' : 'bg-gray-100'
+                    }`;
+                    
+                    card.innerHTML = `
+                        <div class="flex gap-4 flex-1">
+                            <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
+                                <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between overflow-hidden">
+                                <div class="overflow-hidden">
+                                    <h3 class="font-semibold text-sm mb-1 truncate">${kursus.judul}</h3>
+                                    <p class="text-xs leading-snug mb-2 line-clamp-2">${kursus.deskripsi}</p>
+                                    <p class="text-xs text-gray-500">
+                                        ${kursus.tuntas ? 
+                                            `${kursus.materiTuntas} dari ${kursus.materi} Materi Dituntaskan` : 
+                                            `${kursus.materi} Materi | ${kursus.kuis} Kuis`
+                                        }
+                                    </p>
                                 </div>
-                            `;
-                        });
-                }
-
-                function bukaPanel(judul, index) {
-                    document.getElementById('judulDetail').textContent = judul;
-                    const kursus = kursusList[index];
+                                <button onclick="bukaPanel(${index})" 
+                                    class="${kursus.tuntas ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} 
+                                    text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" 
+                                    ${kursus.tuntas ? 'disabled' : ''}>
+                                    Mulai
+                                </button>
+                            </div>
+                        </div>
+                    `;
                     
-                    // Kosongkan daftar materi
-                    materiList.innerHTML = '';
+                    daftarKursus.appendChild(card);
+                });
+            }
+
+            function bukaPanel(index) {
+                const kursus = kursusList[index];
+                document.getElementById('judulDetail').textContent = kursus.judul;
+                
+                materiList.innerHTML = ''; // Kosongkan daftar materi
+                
+                // Isi daftar materi
+                kursus.materiDetail.forEach((materi, idx) => {
+                    const materiItem = document.createElement('li');
+                    materiItem.className = 'flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer';
+                    materiItem.onclick = () => bukaMateri(materi.type, materi.content, materi.judul);
                     
-                    // Isi daftar materi
-                    kursus.materiDetail.forEach((materi, idx) => {
-                        const icon = materi.type === 'video' ? 'bi-play-circle' : 
-                                     materi.type === 'dokumen' ? 'bi-file-text' : 
-                                     'bi-question-circle';
-                        
-                        materiList.innerHTML += `
-                            <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer" 
-                                onclick="bukaMateri('${materi.type}', '${materi.content}', '${materi.judul}')">
-                                <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">${idx + 1}</span>
-                                <div>
-                                    <p class="font-semibold capitalize">${materi.type}</p>
-                                    <p>${materi.judul}</p>
-                                </div>
-                                <i class="bi bi-chevron-right text-gray-400 ml-auto"></i>
-                            </li>
-                        `;
-                    });
+                    materiItem.innerHTML = `
+                        <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">
+                            ${idx + 1}
+                        </span>
+                        <div>
+                            <p class="font-semibold capitalize">${materi.type}</p>
+                            <p>${materi.judul}</p>
+                        </div>
+                        <i class="bi bi-chevron-right text-gray-400 ml-auto"></i>
+                    `;
                     
-                    document.getElementById('panelDetail').classList.remove('translate-x-full');
-                    document.getElementById('overlayDetail').classList.remove('hidden');
+                    materiList.appendChild(materiItem);
+                });
+                
+                // Tampilkan panel
+                document.getElementById('panelDetail').classList.remove('translate-x-full');
+                document.getElementById('overlayDetail').classList.remove('hidden');
+            }
+
+            function bukaMateri(type, content, judul) {
+                if (type === 'video' || type === 'dokumen') {
+                    window.open(content, '_blank'); // Buka di tab baru
+                } else {
+                    alert(`Membuka kuis: ${judul}`); // Untuk kuis
                 }
+            }
 
-                function bukaMateri(type, content, judul) {
-                    if (type === 'video') {
-                        // Buka video YouTube di tab baru
-                        window.open(content, '_blank');
-                    } else if (type === 'dokumen') {
-                        // Buka PDF di tab baru (asumsi content adalah URL/lokasi file PDF)
-                        window.open(content, '_blank');
-                    } else if (type === 'kuis') {
-                        // Tampilkan kuis (bisa diimplementasikan sesuai kebutuhan)
-                        alert(`Membuka kuis: ${judul}`);
-                    }
-                }
-
-                function tutupPanel() {
-                    document.getElementById('panelDetail').classList.add('translate-x-full');
-                    document.getElementById('overlayDetail').classList.add('hidden');
-                }
-
-                function setTab(active) {
-                    if(active === 'semua') {
-                        btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnSemua.classList.remove('text-gray-400');
-                        btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnTuntas.classList.add('text-gray-400');
-                    } else {
-                        btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnTuntas.classList.remove('text-gray-400');
-                        btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
-                        btnSemua.classList.add('text-gray-400');
-                    }
-                }
-
-                btnSemua.onclick = () => {
-                    setTab('semua');
-                    renderKursus('semua');
-                };
-
-                btnTuntas.onclick = () => {
-                    setTab('tuntas');
-                    renderKursus('tuntas');
-                };
-
-                // Inisialisasi awal
-                setTab('semua');
-                renderKursus('semua');
-
-                function toggleSidebar() {
-                    alert('Sidebar toggle logic bisa ditambahkan di sini');
-                }
-            </script>
-        </div>
-    </main>
+            // Inisialisasi
+            renderKursus('semua');
+        </script>
+    </div>
+</main>
 </div>
 </body>
 </html>
