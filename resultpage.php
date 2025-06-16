@@ -69,128 +69,62 @@
       <div class="px-6 py-6">
         <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
         
-        <!-- Ringkasan Statistik -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <!-- Kartu Nilai Rata-rata Kursus -->
-          <div class="bg-white rounded-xl shadow p-6 flex items-center gap-4">
-            <div class="relative w-16 h-16">
-              <svg class="w-full h-full" viewBox="0 0 36 36">
-                <path
-                  d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#e6e6e6"
-                  stroke-width="3"
-                />
-                <path
-                  class="progress-ring__circle"
-                  d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#3b82f6"
-                  stroke-width="3"
-                  stroke-dasharray="80 100"
-                />
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <span class="font-bold text-blue-600">80</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-gray-500 text-sm">Kursus</p>
-              <p class="font-bold text-lg">80%</p>
-            </div>
-          </div>
-          
-          <!-- Kartu Nilai Rata-rata Kuis -->
-          <div class="bg-white rounded-xl shadow p-6 flex items-center gap-4">
-            <div class="relative w-16 h-16">
-              <svg class="w-full h-full" viewBox="0 0 36 36">
-                <path
-                  d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#e6e6e6"
-                  stroke-width="3"
-                />
-                <path
-                  class="progress-ring__circle"
-                  d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831"
-                  fill="none"
-                  stroke="#10b981"
-                  stroke-width="3"
-                  stroke-dasharray="86 100"
-                />
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <span class="font-bold text-green-600">86</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-gray-500 text-sm">Hasil Kuis</p>
-              <p class="font-bold text-lg">86%</p>
-            </div>
-          </div>
-          
-          <!-- Kartu Tanggal Review -->
-          <div class="bg-white rounded-xl shadow p-6 flex items-center gap-4">
-            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-              <i class="bi bi-calendar-check text-2xl"></i>
-            </div>
-            <div>
-              <p class="text-gray-500 text-sm">Review</p>
-              <p class="font-bold text-lg">09/06/2025</p>
-            </div>
-          </div>
-        </div>
-        
         <!-- Daftar Hasil Kuis -->
-        <div class="bg-white rounded-xl shadow overflow-hidden">
-          <!-- Header Tabel -->
-          <div class="grid grid-cols-12 bg-gray-100 p-4 font-semibold text-gray-700">
-            <div class="col-span-5">Materi</div>
-            <div class="col-span-2 text-center">Nilai</div>
-            <div class="col-span-2 text-center">Progress</div>
-            <div class="col-span-3 text-center">Review</div>
+        <div class="space-y-4">
+          <!-- Item Kuis 1 -->
+          <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold">Anatomi Sepeda</h3>
+              <span class="text-sm text-gray-500">06/04/2025</span>
+            </div>
+            <div class="mt-2 flex justify-between items-center">
+              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                <i class="bi bi-eye"></i> Review
+              </button>
+              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+            </div>
           </div>
           
-          <!-- Baris Hasil Kuis -->
-          <div class="grid grid-cols-12 p-4 border-b border-gray-200 items-center">
-            <div class="col-span-5 font-medium">Sistem Penggerak</div>
-            <div class="col-span-2 text-center font-bold text-blue-600">85</div>
-            <div class="col-span-2">
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
-              </div>
+          <!-- Item Kuis 2 -->
+          <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold">Sistem Penggerak</h3>
+              <span class="text-sm text-gray-500">06/04/2025</span>
             </div>
-            <div class="col-span-3 text-center text-sm text-gray-500">06/04/2025</div>
+            <div class="mt-2 flex justify-between items-center">
+              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                <i class="bi bi-eye"></i> Review
+              </button>
+              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+            </div>
           </div>
           
-          <div class="grid grid-cols-12 p-4 border-b border-gray-200 items-center">
-            <div class="col-span-5 font-medium">Rantai dan Pemeliharaannya</div>
-            <div class="col-span-2 text-center font-bold text-blue-600">80</div>
-            <div class="col-span-2">
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
-              </div>
+          <!-- Item Kuis 3 -->
+          <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold">Rantai dan Pemeliharaannya</h3>
+              <span class="text-sm text-gray-500">07/04/2025</span>
             </div>
-            <div class="col-span-3 text-center text-sm text-gray-500">07/04/2025</div>
+            <div class="mt-2 flex justify-between items-center">
+              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                <i class="bi bi-eye"></i> Review
+              </button>
+              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+            </div>
           </div>
           
-          <div class="grid grid-cols-12 p-4 items-center">
-            <div class="col-span-5 font-medium">Sistem Pengereman dan Keselamatan</div>
-            <div class="col-span-2 text-center font-bold text-blue-600">90</div>
-            <div class="col-span-2">
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
-              </div>
+          <!-- Item Kuis 4 -->
+          <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold">Sistem Pengereman dan Keselamatan</h3>
+              <span class="text-sm text-gray-500">08/04/2025</span>
             </div>
-            <div class="col-span-3 text-center text-sm text-gray-500">08/04/2025</div>
+            <div class="mt-2 flex justify-between items-center">
+              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                <i class="bi bi-eye"></i> Review
+              </button>
+              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+            </div>
           </div>
         </div>
       </div>
@@ -198,17 +132,15 @@
   </div>
 
   <script>
-    // Animasi progress ring
-    document.addEventListener('DOMContentLoaded', function() {
-      const circles = document.querySelectorAll('.progress-ring__circle');
-      circles.forEach(circle => {
-        const radius = circle.r.baseVal.value;
-        const circumference = radius * 2 * Math.PI;
-        const percent = parseIntcircle.getAttribute('stroke-dasharray').split(' ')[0];
-        
-        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-        circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
-      });
+    // Fungsi untuk menangani klik tombol review
+    document.querySelectorAll('button').forEach(button => {
+      if (button.textContent.includes('Review')) {
+        button.addEventListener('click', function() {
+          const quizTitle = this.closest('.bg-white').querySelector('h3').textContent;
+          alert(`Membuka review untuk kuis: ${quizTitle}`);
+          // Di sini bisa diarahkan ke halaman review atau menampilkan modal
+        });
+      }
     });
   </script>
 </body>
