@@ -394,7 +394,7 @@
                 </div>
             </div>
 
-            <!-- Tambahkan ini di dalam <main>, setelah div dengan class "px-6 py-6" -->
+            <!-- Kuis -->
             <div id="kuisContainer" class="hidden px-6 py-6">
                 <div class="bg-white rounded-xl shadow p-6 max-w-3xl mx-auto">
                     <h2 class="text-2xl font-bold mb-6" id="judulKuis">Sistem Suspensi dan Kenyamanan Berkendara</h2>
@@ -410,7 +410,7 @@
                     
                     <div class="flex justify-between items-center pt-4 border-t border-gray-200">
                         <button onclick="tutupKuis()" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">Batal</button>
-                        <button onclick="kirimKuis()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Kirim</button>
+                        <button onclick="kirimKuis()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Lanjut</button>
                     </div>
                 </div>
             </div>
