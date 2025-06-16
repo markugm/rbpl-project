@@ -358,7 +358,7 @@
                     
                     <div class="flex justify-between items-center pt-4 border-t border-gray-200">
                         <button onclick="tutupKuis()" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">Batal</button>
-                        <button onclick="kirimKuis()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Kirim</button>
+                        <button onclick="kirimKuis()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Lanjut</button>
                     </div>
                 </div>
             </div>
