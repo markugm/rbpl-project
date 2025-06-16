@@ -363,51 +363,36 @@
                 </div>
             </div>
 
-            <!-- Popup Hasil Kuis (Versi Sederhana) -->
+            <!-- Popup Hasil Kuis -->
             <div id="popupHasil" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-                <div class="bg-white rounded-xl p-6 max-w-sm w-full mx-4">
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold mb-1">Hasil Kuis</h3>
-                        <p class="text-lg mb-4">Skor Anda:</p>
-                        
-                        <div class="bg-blue-50 rounded-lg p-4 mb-5">
-                            <p class="font-semibold text-blue-800" id="hasilSkor">
-                                Anda menjawab benar 0 dari 5 pertanyaan
-                            </p>
-                        </div>
-                        
-                        <button onclick="tutupPopupHasil()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition w-full">
-                            Selesai
+                <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Hasil Kuis</h3>
+                        <button onclick="tutupPopupHasil()" class="text-gray-500 hover:text-gray-700">
+                            <i class="bi bi-x text-xl"></i>
                         </button>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">Skor Anda:</p>
+                        <div class="flex items-center gap-4">
+                            <div id="skorCircle" class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-2xl font-bold text-green-800">0</div>
+                            <p id="detailSkor" class="text-sm text-gray-600">Anda menjawab benar 0 dari 5 pertanyaan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">Seal:</p>
+                        <div id="gridSeal" class="grid grid-cols-5 gap-2 text-center">
+                            <!-- Item seal akan diisi secara dinamis -->
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="tutupPopupHasil()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Selesai</button>
                     </div>
                 </div>
             </div>
-
-            <script>
-                // Fungsi tampilkanHasilKuis yang disederhanakan
-                function tampilkanHasilKuis() {
-                    // Hitung jawaban benar
-                    let jawabanBenar = 0;
-                    kuisData.pertanyaan.forEach((pertanyaan, index) => {
-                        if (kuisData.jawabanUser[index] === pertanyaan.jawabanBenar) {
-                            jawabanBenar++;
-                        }
-                    });
-                    
-                    // Update teks hasil
-                    document.getElementById('hasilSkor').textContent = 
-                        `Anda menjawab benar ${jawabanBenar} dari ${kuisData.pertanyaan.length} pertanyaan`;
-                    
-                    // Tampilkan popup
-                    tutupKuis();
-                    document.getElementById('popupHasil').classList.remove('hidden');
-                }
-
-                // Fungsi tutupPopupHasil tetap sama
-                function tutupPopupHasil() {
-                    document.getElementById('popupHasil').classList.add('hidden');
-                }
-            </script>
 
             <script>
                 // Data kuis
