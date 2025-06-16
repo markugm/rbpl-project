@@ -508,7 +508,6 @@
                     }
                 }
 
-                // Fungsi untuk menampilkan hasil kuis
                 function tampilkanHasilKuis() {
                     // Hitung jawaban benar
                     let jawabanBenar = 0;
@@ -518,55 +517,51 @@
                         }
                     });
                     
-                    // Update teks hasil
-                    document.getElementById('hasilSkor').textContent = 
-                        `Anda menjawab benar ${jawabanBenar} dari ${kuisData.pertanyaan.length} pertanyaan`;
+                    // Update skor
+                    document.getElementById('skorCircle').textContent = jawabanBenar;
+                    document.getElementById('detailSkor').textContent = `Anda menjawab benar ${jawabanBenar} dari ${kuisData.pertanyaan.length} pertanyaan`;
                     
-                    // Tampilkan popup
+                    // Update warna skor berdasarkan performa
+                    const skorCircle = document.getElementById('skorCircle');
+                    if (jawabanBenar <= 2) {
+                        skorCircle.classList.remove('bg-green-100', 'text-green-800');
+                        skorCircle.classList.add('bg-red-100', 'text-red-800');
+                    } else if (jawabanBenar <= 3) {
+                        skorCircle.classList.remove('bg-green-100', 'text-green-800');
+                        skorCircle.classList.add('bg-yellow-100', 'text-yellow-800');
+                    } else {
+                        skorCircle.classList.remove('bg-red-100', 'text-red-800', 'bg-yellow-100', 'text-yellow-800');
+                        skorCircle.classList.add('bg-green-100', 'text-green-800');
+                    }
+                    
+                    // Isi grid seal
+                    const gridSeal = document.getElementById('gridSeal');
+                    gridSeal.innerHTML = '';
+                    for (let i = 1; i <= 15; i++) {
+                        const isActive = i <= jawabanBenar * 3;
+                        gridSeal.innerHTML += `
+                            <div class="p-2 rounded ${isActive ? 'bg-green-100' : 'bg-gray-100'}">${i}</div>
+                        `;
+                    }
+                    
+                    // Tutup kuis dan tampilkan popup hasil
+                    tutupKuis();
                     document.getElementById('popupHasil').classList.remove('hidden');
                 }
 
-                // Fungsi kirimKuis yang diperbaiki
-                function kirimKuis() {
-                    const jawabanTerpilih = document.querySelector('input[name="jawaban"]:checked');
-                    if (!jawabanTerpilih) {
-                        alert('Silakan pilih jawaban terlebih dahulu');
-                        return;
-                    }
-                    
-                    // Simpan jawaban user
-                    kuisData.jawabanUser[kuisData.pertanyaanAktif] = parseInt(jawabanTerpilih.value);
-                    
-                    // Cek apakah sudah menjawab semua pertanyaan
-                    if (kuisData.jawabanUser.length < kuisData.pertanyaan.length) {
-                        // Lanjut ke pertanyaan berikutnya
-                        tampilkanPertanyaan(kuisData.pertanyaanAktif + 1);
-                    } else {
-                        // Tampilkan hasil
-                        tampilkanHasilKuis();
-                    }
-                }
-
-                // Fungsi untuk menutup popup
                 function tutupPopupHasil() {
                     document.getElementById('popupHasil').classList.add('hidden');
-                    // Kembali ke halaman kursus
-                    document.querySelector('.px-6.py-6').classList.remove('hidden');
-                    document.getElementById('kuisContainer').classList.add('hidden');
                 }
 
-                // Pastikan fungsi ini dipanggil saat membuka kuis
-                function bukaKuis() {
-                    // Reset jawaban user
-                    kuisData.jawabanUser = [];
-                    kuisData.pertanyaanAktif = 0;
-                    
-                    // Sembunyikan halaman kursus
-                    document.querySelector('.px-6.py-6').classList.add('hidden');
-                    // Tampilkan kuis
-                    document.getElementById('kuisContainer').classList.remove('hidden');
-                    // Tampilkan pertanyaan pertama
-                    tampilkanPertanyaan(0);
+                // Modifikasi fungsi bukaMateri untuk menangani kuis
+                function bukaMateri(type, content, judul) {
+                    if (type === 'video') {
+                        window.open(content, '_blank');
+                    } else if (type === 'dokumen') {
+                        window.open(content, '_blank');
+                    } else if (type === 'kuis') {
+                        bukaKuis();
+                    }
                 }
             </script>
         </main>
