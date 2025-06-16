@@ -348,7 +348,7 @@
                     <h2 class="text-2xl font-bold mb-6" id="judulKuis">Sistem Suspensi dan Kenyamanan Berkendara</h2>
                     
                     <div class="mb-8">
-                        <p class="font-semibold mb-4">Pertanyaan <span id="nomorPertanyaan">1</span>/5</p>
+                        <p class="font-semibold mb-4">Pertanyaan <span id="nomorPertanyaan">1</span></p>
                         <p id="pertanyaanKuis">Seorang pengendara sepeda gunung aktif yang sering melalui lintasan turunan curam menginginkan efisiensi saat berganti posisi duduk secara cepat tanpa menghentikan laju sepeda. Komponen yang paling sesuai untuk memenuhi kebutuhan tersebut adalah...</p>
                         
                         <div class="mt-6 space-y-3" id="opsiJawaban">
