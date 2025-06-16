@@ -63,54 +63,75 @@
         <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
         
         <!-- Grid Kartu Kuis -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Kartu 1: Anatomi Sepeda -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-4">
-              <h3 class="font-semibold text-lg mb-2">Anatomi Sepeda</h3>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-sm text-gray-500">06/04/2025</span>
-                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
-                  <i class="bi bi-eye"></i> Review
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Card Template -->
+              <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
+                <!-- Nilai -->
+                <div class="flex items-center gap-3">
+                  <div class="bg-gray-100 border rounded-md px-2 py-1 text-center">
+                    <p class="text-xl font-bold text-gray-900 leading-none">80</p>
+                    <p class="text-xs text-gray-500">/ 100</p>
+                  </div>
+                  <p class="text-base font-semibold text-gray-800">Anatomi Sepeda</p>
+                </div>
+
+                <!-- Tanggal -->
+                <div class="text-sm text-gray-500 mt-4 flex items-center gap-1">
+                  <i class="bi bi-calendar-event"></i> 06/04/2025
+                </div>
+
+                <!-- Tombol Review -->
+                <button class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium">
+                  Review
                 </button>
               </div>
-            </div>
-          </div>
-          
-          <!-- Kartu 2: Sistem Penggerak -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-4">
-              <h3 class="font-semibold text-lg mb-2">Sistem Penggerak</h3>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-sm text-gray-500">06/04/2025</span>
-                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
-                  <i class="bi bi-eye"></i> Review
+
+              <!-- Copy & sesuaikan untuk card lainnya -->
+              <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
+                <div class="flex items-center gap-3">
+                  <div class="bg-gray-100 border rounded-md px-2 py-1 text-center">
+                    <p class="text-xl font-bold text-gray-900 leading-none">85</p>
+                    <p class="text-xs text-gray-500">/ 100</p>
+                  </div>
+                  <p class="text-base font-semibold text-gray-800">Sistem Penggerak</p>
+                </div>
+                <div class="text-sm text-gray-500 mt-4 flex items-center gap-1">
+                  <i class="bi bi-calendar-event"></i> 06/04/2025
+                </div>
+                <button class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium">
+                  Review
                 </button>
               </div>
-            </div>
-          </div>
-          
-          <!-- Kartu 3: Rantai dan Pemeliharaannya -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-4">
-              <h3 class="font-semibold text-lg mb-2">Rantai dan Pemeliharaannya</h3>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-sm text-gray-500">07/04/2025</span>
-                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
-                  <i class="bi bi-eye"></i> Review
+
+              <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
+                <div class="flex items-center gap-3">
+                  <div class="bg-gray-100 border rounded-md px-2 py-1 text-center">
+                    <p class="text-xl font-bold text-gray-900 leading-none">80</p>
+                    <p class="text-xs text-gray-500">/ 100</p>
+                  </div>
+                  <p class="text-base font-semibold text-gray-800">Rantai dan Pemeliharaannya</p>
+                </div>
+                <div class="text-sm text-gray-500 mt-4 flex items-center gap-1">
+                  <i class="bi bi-calendar-event"></i> 07/04/2025
+                </div>
+                <button class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium">
+                  Review
                 </button>
               </div>
-            </div>
-          </div>
-          
-          <!-- Kartu 4: Sistem Pengereman dan Keselamatan -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-4">
-              <h3 class="font-semibold text-lg mb-2">Sistem Pengereman dan Keselamatan</h3>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-sm text-gray-500">08/04/2025</span>
-                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
-                  <i class="bi bi-eye"></i> Review
+
+              <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
+                <div class="flex items-center gap-3">
+                  <div class="bg-gray-100 border rounded-md px-2 py-1 text-center">
+                    <p class="text-xl font-bold text-gray-900 leading-none">90</p>
+                    <p class="text-xs text-gray-500">/ 100</p>
+                  </div>
+                  <p class="text-base font-semibold text-gray-800">Sistem Pengereman dan Keselamatan</p>
+                </div>
+                <div class="text-sm text-gray-500 mt-4 flex items-center gap-1">
+                  <i class="bi bi-calendar-event"></i> 08/04/2025
+                </div>
+                <button class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium">
+                  Review
                 </button>
               </div>
             </div>
