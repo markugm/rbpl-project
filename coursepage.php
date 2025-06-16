@@ -341,39 +341,6 @@
                     }
                 </script>
             </div>
-            
-            
-
-            <!-- Popup Hasil Kuis -->
-            <div id="popupHasil" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-                <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Hasil Kuis</h3>
-                        <button onclick="tutupPopupHasil()" class="text-gray-500 hover:text-gray-700">
-                            <i class="bi bi-x text-xl"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <p class="font-semibold mb-2">Skor Anda:</p>
-                        <div class="flex items-center gap-4">
-                            <div id="skorCircle" class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-2xl font-bold text-green-800">0</div>
-                            <p id="detailSkor" class="text-sm text-gray-600">Anda menjawab benar 0 dari 5 pertanyaan</p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <p class="font-semibold mb-2">Seal:</p>
-                        <div id="gridSeal" class="grid grid-cols-5 gap-2 text-center">
-                            <!-- Item seal akan diisi secara dinamis -->
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button onclick="tutupPopupHasil()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Selesai</button>
-                    </div>
-                </div>
-            </div>
 
             <!-- Kuis -->
             <div id="kuisContainer" class="hidden px-6 py-6">
