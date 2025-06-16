@@ -87,12 +87,61 @@
             <!-- Cards -->
             <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             <script>
-                // Data Kursus (diperbarui dengan contoh pertanyaan kuis)
                 const kursusList = [
+                    { 
+                        judul: "Pengenalan Sepeda", 
+                        deskripsi: "Jenis-jenis Sepeda • Anatomi Sepeda • Ukuran dan Geometri Sepeda", 
+                        materi: 3, 
+                        kuis: 1, 
+                        tuntas: true, 
+                        materiTuntas: 3,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Pengenalan Sepeda", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_1" 
+                            },
+                            { 
+                                type: "video", 
+                                judul: "Anatomi Sepeda", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_2" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Panduan Ukuran Sepeda", 
+                                content: "panduan_ukuran.pdf" 
+                            },
+                            { 
+                                type: "kuis", 
+                                judul: "Kuis Pengenalan Sepeda", 
+                                questions: [] 
+                            }
+                        ]
+                    },
+                    { 
+                        judul: "Sistem Penggerak", 
+                        deskripsi: "Crankset dan Bottom Bracket • Casette dan Freewheel • Derailleur dan Shifter", 
+                        materi: 4, 
+                        kuis: 1, 
+                        tuntas: true, 
+                        materiTuntas: 2,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Sistem Penggerak", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_3" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Panduan Perawatan Rantai", 
+                                content: "perawatan_rantai.pdf" 
+                            }
+                        ]
+                    },
                     { 
                         judul: "Sistem Suspensi dan Kenyamanan Berkendara", 
                         deskripsi: "Suspensi Depan dan Belakang • Sadel dan Seatposts", 
-                        materi: 2, 
+                        materi: 3, 
                         kuis: 1, 
                         tuntas: false, 
                         materiTuntas: 0,
@@ -100,140 +149,133 @@
                             { 
                                 type: "video", 
                                 judul: "Suspensi Depan dan Belakang", 
-                                content: "https://youtube.com/embed/abc123" 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_4" 
+                            },
+                            { 
+                                type: "video", 
+                                judul: "Sadel dan Seatposts", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_5" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Panduan Sadel", 
+                                content: "panduan_sadel.pdf" 
                             },
                             { 
                                 type: "kuis", 
-                                judul: "Kuis Sistem Suspensi", 
-                                content: "kuis_suspensi",
-                                totalQuestions: 15,
-                                questions: [
-                                    {
-                                        question: "Seorang pelanggan pemula menanyakan alasan mengapa suspensi perlu disesuaikan berdasarkan berat badan pengendara. Perjelasan yang paling tepat secara teknis adalah...",
-                                        options: [
-                                            "Agar sepeda tetap terlihat seimbang secara visual",
-                                            "Untuk memastikan performa suspensi optimal dalam menyerap guncangan sesuai beban",
-                                            "Supaya sepeda lebih ringan saat dikayuh",
-                                            "Karena semua suspensi sudah memiliki pengaturan standar pabrik yang tidak perlu diubah"
-                                        ],
-                                        answer: 1
-                                    }
-                                ]
+                                judul: "Kuis Sistem Suspensi dan Kenyamanan Berkendara", 
+                                questions: [] 
+                            }
+                        ]
+                    },
+                    { 
+                        judul: "Sistem Pengereman dan Keselamatan", 
+                        deskripsi: "Jenis-jenis Rem Sepeda • Cara Kerja dan Perawatan Rem • Aksesori Keselamatan", 
+                        materi: 4, 
+                        kuis: 1, 
+                        tuntas: true, 
+                        materiTuntas: 2,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_3" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
+                                content: "perawatan_rantai.pdf" 
+                            },
+                            { 
+                                type: "kuis", 
+                                judul: "Sistem Pengereman dan Keselamatan", 
+                                questions: [] 
+                            }
+                        ]
+                    },
+                    { 
+                        judul: "Roda dan Ban Sepeda", 
+                        deskripsi: "Wheelset dan Hubs • Ban dan Tekanan Udara • Perawatan Roda", 
+                        materi: 3, 
+                        kuis: 1, 
+                        tuntas: false, 
+                        materiTuntas: 0,
+                        materiDetail: [
+                            { 
+                                type: "video", 
+                                judul: "Wheelset dan Hubs", 
+                                content: "https://www.youtube.com/embed/VIDEO_ID_6" 
+                            },
+                            { 
+                                type: "dokumen", 
+                                judul: "Ban dan Tekanan Udara", 
+                                content: "panduan_perawatan.pdf" 
+                            },
+                            { 
+                                type: "kuis", 
+                                judul: "Kuis Roda dan Ban Sepeda", 
+                                questions: [] 
                             }
                         ]
                     }
-                    // Data kursus lainnya...
                 ];
 
-                // Variabel untuk kuis
-                let currentKuis = null;
-                let currentQuestionIndex = 0;
+                const btnSemua = document.getElementById('btnSemua');
+                const btnTuntas = document.getElementById('btnTuntas');
+                const daftarKursus = document.getElementById('daftarKursus');
+                const materiList = document.getElementById('materiList');
 
-                // Fungsi bukaMateri yang diperbarui (tambahkan parameter indexKursus)
-                function bukaMateri(type, content, judul, indexKursus) {
-                    if (type === 'video') {
-                        window.open(content, '_blank');
-                    } else if (type === 'dokumen') {
-                        window.open(content, '_blank');
-                    } else if (type === 'kuis') {
-                        // Dapatkan data kuis lengkap
-                        const [kursusIdx, materiIdx] = indexKursus.split('-').map(Number);
-                        currentKuis = kursusList[kursusIdx].materiDetail[materiIdx];
-                        currentQuestionIndex = 0;
-                        
-                        // Tampilkan modal kuis
-                        tampilkanModalKuis();
-                    }
-                }
-
-                // Fungsi untuk menampilkan modal kuis (BARU)
-                function tampilkanModalKuis() {
-                    const question = currentKuis.questions[currentQuestionIndex];
-                    
-                    const modalHTML = `
-                    <div id="kuisModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div class="bg-white rounded-lg p-6 w-full max-w-2xl mx-4">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-lg font-bold">${currentKuis.judul}</h3>
-                                <button onclick="tutupModalKuis()" class="text-gray-500 hover:text-gray-700">
-                                    <i class="bi bi-x"></i>
-                                </button>
-                            </div>
-                            
-                            <div class="mb-6">
-                                <p class="text-sm text-gray-600 mb-2">${currentKuis.totalQuestions} Soal • 0 Terjawab</p>
-                                <p class="font-medium">${question.question}</p>
-                            </div>
-                            
-                            <div class="space-y-3 mb-6">
-                                ${question.options.map((option, idx) => `
-                                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-                                        <input type="radio" name="quizOption" value="${idx}" class="form-radio h-4 w-4 text-blue-600">
-                                        <span>${option}</span>
-                                    </label>
-                                `).join('')}
-                            </div>
-                            
-                            <div class="flex justify-between items-center">
-                                <div class="flex flex-wrap gap-1">
-                                    ${Array.from({length: currentKuis.totalQuestions}, (_, i) => `
-                                        <span class="w-6 h-6 flex items-center justify-center text-xs border rounded 
-                                            ${i === currentQuestionIndex ? 'bg-blue-900 text-white border-blue-900' : 'bg-white border-gray-300'}">
-                                            ${i + 1}
-                                        </span>
-                                    `).join('')}
+                function renderKursus(filter) {
+                    daftarKursus.innerHTML = '';
+                    kursusList
+                        .filter(k => {
+                            if(filter === 'tuntas') {
+                                return k.materiTuntas > 0;
+                            }
+                            return true;
+                        })
+                        .forEach((item, index) => {
+                            const isTuntasFilter = filter === 'tuntas';
+                            daftarKursus.innerHTML += `
+                                <div class="rounded-xl shadow px-4 py-3 flex flex-col justify-between h-[170px] ${isTuntasFilter ? 'bg-gray-200 text-gray-600' : 'bg-gray-100'}">
+                                    <div class="flex gap-4 flex-1">
+                                        <div class="w-1/4 bg-white aspect-[3/4] rounded-md flex items-center justify-center">
+                                            <div class="bg-black text-white rounded-full text-xs px-2 py-1 font-semibold">#${index + 1}</div>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-between overflow-hidden">
+                                            <div class="overflow-hidden">
+                                                <h3 class="font-semibold text-sm mb-1 truncate w-full">${item.judul}</h3>
+                                                <p class="text-xs leading-snug mb-2 line-clamp-2">${item.deskripsi}</p>
+                                                <p class="text-xs ${isTuntasFilter ? 'text-gray-500' : 'text-gray-500'}">
+                                                    ${isTuntasFilter ? `${item.materiTuntas} dari ${item.materi} Materi Dituntaskan` : `${item.materi} Materi | ${item.kuis} Kuis`}
+                                                </p>
+                                            </div>
+                                            <button onclick="bukaPanel('${item.judul}', ${index})" class="${isTuntasFilter ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-900 hover:bg-blue-800'} text-white text-sm px-4 py-1 rounded transition mt-2 w-fit" ${isTuntasFilter ? 'disabled' : ''}>
+                                                Mulai
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="flex gap-2">
-                                    <button onclick="tutupModalKuis()" class="px-4 py-2 text-gray-600 hover:text-gray-800">
-                                        Batalkan
-                                    </button>
-                                    <button onclick="selanjutnyaPertanyaan()" class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded">
-                                        ${currentQuestionIndex === currentKuis.questions.length - 1 ? 'Selesai' : 'Selanjutnya'}
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-6 pt-4 border-t text-sm text-gray-500 flex justify-between">
-                                <span>Ajuy Sutiyo</span>
-                                <span>Pegawai Training</span>
-                            </div>
-                        </div>
-                    </div>
-                    `;
-                    
-                    document.body.insertAdjacentHTML('beforeend', modalHTML);
+                            `;
+                        });
                 }
 
-                // Fungsi untuk pertanyaan selanjutnya (BARU)
-                function selanjutnyaPertanyaan() {
-                    if (currentQuestionIndex < currentKuis.questions.length - 1) {
-                        currentQuestionIndex++;
-                        document.getElementById('kuisModal').remove();
-                        tampilkanModalKuis();
-                    } else {
-                        alert('Kuis selesai!');
-                        tutupModalKuis();
-                    }
-                }
-
-                // Fungsi untuk menutup modal kuis (BARU)
-                function tutupModalKuis() {
-                    const modal = document.getElementById('kuisModal');
-                    if (modal) modal.remove();
-                }
-
-                // Pada fungsi bukaPanel, update bagian render materi (perubahan kecil):
                 function bukaPanel(judul, index) {
                     document.getElementById('judulDetail').textContent = judul;
                     const kursus = kursusList[index];
                     
+                    // Kosongkan daftar materi
                     materiList.innerHTML = '';
                     
+                    // Isi daftar materi
                     kursus.materiDetail.forEach((materi, idx) => {
+                        const icon = materi.type === 'video' ? 'bi-play-circle' : 
+                                     materi.type === 'dokumen' ? 'bi-file-text' : 
+                                     'bi-question-circle';
+                        
                         materiList.innerHTML += `
                             <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer" 
-                                onclick="bukaMateri('${materi.type}', '${materi.content}', '${materi.judul}', '${index}-${idx}')">
+                                onclick="bukaMateri('${materi.type}', '${materi.content}', '${materi.judul}')">
                                 <span class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold">${idx + 1}</span>
                                 <div>
                                     <p class="font-semibold capitalize">${materi.type}</p>
@@ -246,6 +288,56 @@
                     
                     document.getElementById('panelDetail').classList.remove('translate-x-full');
                     document.getElementById('overlayDetail').classList.remove('hidden');
+                }
+
+                function bukaMateri(type, content, judul) {
+                    if (type === 'video') {
+                        // Buka video YouTube di tab baru
+                        window.open(content, '_blank');
+                    } else if (type === 'dokumen') {
+                        // Buka PDF di tab baru (asumsi content adalah URL/lokasi file PDF)
+                        window.open(content, '_blank');
+                    } else if (type === 'kuis') {
+                        // Tampilkan kuis (bisa diimplementasikan sesuai kebutuhan)
+                        alert(`Membuka kuis: ${judul}`);
+                    }
+                }
+
+                function tutupPanel() {
+                    document.getElementById('panelDetail').classList.add('translate-x-full');
+                    document.getElementById('overlayDetail').classList.add('hidden');
+                }
+
+                function setTab(active) {
+                    if(active === 'semua') {
+                        btnSemua.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnSemua.classList.remove('text-gray-400');
+                        btnTuntas.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnTuntas.classList.add('text-gray-400');
+                    } else {
+                        btnTuntas.classList.add('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnTuntas.classList.remove('text-gray-400');
+                        btnSemua.classList.remove('font-semibold', 'border-b-2', 'border-black', 'text-black');
+                        btnSemua.classList.add('text-gray-400');
+                    }
+                }
+
+                btnSemua.onclick = () => {
+                    setTab('semua');
+                    renderKursus('semua');
+                };
+
+                btnTuntas.onclick = () => {
+                    setTab('tuntas');
+                    renderKursus('tuntas');
+                };
+
+                // Inisialisasi awal
+                setTab('semua');
+                renderKursus('semua');
+
+                function toggleSidebar() {
+                    alert('Sidebar toggle logic bisa ditambahkan di sini');
                 }
             </script>
         </div>
