@@ -19,7 +19,7 @@
                     <a href="coursepage.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
                         <i class="bi bi-book"></i> Kursus
                     </a>
-                    <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+                    <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                         <i class="bi bi-bar-chart-line"></i> Hasil Kuis
                     </a>
                     <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
