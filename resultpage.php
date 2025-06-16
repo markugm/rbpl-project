@@ -5,13 +5,6 @@
   <title>Hasil Kuis - Jago Sepeda</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    .progress-ring__circle {
-      transition: stroke-dashoffset 0.5s;
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-    }
-  </style>
 </head>
 <body class="bg-gray-100 font-sans">
   <div class="flex h-screen">
@@ -69,61 +62,57 @@
       <div class="px-6 py-6">
         <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
         
-        <!-- Daftar Hasil Kuis -->
-        <div class="space-y-4">
-          <!-- Item Kuis 1 -->
-          <div class="bg-white rounded-lg shadow p-4">
-            <div class="flex justify-between items-center">
-              <h3 class="font-semibold">Anatomi Sepeda</h3>
-              <span class="text-sm text-gray-500">06/04/2025</span>
-            </div>
-            <div class="mt-2 flex justify-between items-center">
-              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
-                <i class="bi bi-eye"></i> Review
-              </button>
-              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
-            </div>
-          </div>
-          
-          <!-- Item Kuis 2 -->
-          <div class="bg-white rounded-lg shadow p-4">
-            <div class="flex justify-between items-center">
-              <h3 class="font-semibold">Sistem Penggerak</h3>
-              <span class="text-sm text-gray-500">06/04/2025</span>
-            </div>
-            <div class="mt-2 flex justify-between items-center">
-              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
-                <i class="bi bi-eye"></i> Review
-              </button>
-              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+        <!-- Grid Kartu Kuis -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Kartu 1: Anatomi Sepeda -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Anatomi Sepeda</h3>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-sm text-gray-500">06/04/2025</span>
+                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
+                  <i class="bi bi-eye"></i> Review
+                </button>
+              </div>
             </div>
           </div>
           
-          <!-- Item Kuis 3 -->
-          <div class="bg-white rounded-lg shadow p-4">
-            <div class="flex justify-between items-center">
-              <h3 class="font-semibold">Rantai dan Pemeliharaannya</h3>
-              <span class="text-sm text-gray-500">07/04/2025</span>
-            </div>
-            <div class="mt-2 flex justify-between items-center">
-              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
-                <i class="bi bi-eye"></i> Review
-              </button>
-              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+          <!-- Kartu 2: Sistem Penggerak -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Sistem Penggerak</h3>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-sm text-gray-500">06/04/2025</span>
+                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
+                  <i class="bi bi-eye"></i> Review
+                </button>
+              </div>
             </div>
           </div>
           
-          <!-- Item Kuis 4 -->
-          <div class="bg-white rounded-lg shadow p-4">
-            <div class="flex justify-between items-center">
-              <h3 class="font-semibold">Sistem Pengereman dan Keselamatan</h3>
-              <span class="text-sm text-gray-500">08/04/2025</span>
+          <!-- Kartu 3: Rantai dan Pemeliharaannya -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Rantai dan Pemeliharaannya</h3>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-sm text-gray-500">07/04/2025</span>
+                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
+                  <i class="bi bi-eye"></i> Review
+                </button>
+              </div>
             </div>
-            <div class="mt-2 flex justify-between items-center">
-              <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
-                <i class="bi bi-eye"></i> Review
-              </button>
-              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Selesai</span>
+          </div>
+          
+          <!-- Kartu 4: Sistem Pengereman dan Keselamatan -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Sistem Pengereman dan Keselamatan</h3>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-sm text-gray-500">08/04/2025</span>
+                <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm">
+                  <i class="bi bi-eye"></i> Review
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -132,7 +121,7 @@
   </div>
 
   <script>
-    // Fungsi untuk menangani klik tombol review
+    // Fungsi untuk tombol review
     document.querySelectorAll('button').forEach(button => {
       if (button.textContent.includes('Review')) {
         button.addEventListener('click', function() {
