@@ -341,6 +341,134 @@
                 }
             </script>
         </div>
+        
+        <div id="kuisContainer" class="hidden px-6 py-6">
+            <div class="bg-white rounded-xl shadow p-6 max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6" id="judulKuis">Sistem Suspensi dan Kenyamanan Berkendara</h2>
+                
+                <div class="mb-8">
+                    <p class="font-semibold mb-4">Pertanyaan</p>
+                    <p id="pertanyaanKuis">Seorang pengendara sepeda gunung aktif yang sering melalui lintasan turunan curam menginginkan efisiensi saat berganti posisi duduk secara cepat tanpa menghentikan laju sepeda. Komponen yang paling sesuai untuk memenuhi kebutuhan tersebut adalah...</p>
+                    
+                    <div class="mt-6 space-y-3" id="opsiJawaban">
+                        <div class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="radio" name="jawaban" id="jawaban1" class="w-4 h-4">
+                            <label for="jawaban1" class="cursor-pointer">Rear shock coil</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="radio" name="jawaban" id="jawaban2" class="w-4 h-4">
+                            <label for="jawaban2" class="cursor-pointer">Dropper seatpost</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="radio" name="jawaban" id="jawaban3" class="w-4 h-4">
+                            <label for="jawaban3" class="cursor-pointer">Suspensi rigid</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="radio" name="jawaban" id="jawaban4" class="w-4 h-4">
+                            <label for="jawaban4" class="cursor-pointer">Seatpost konvensional</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+                    <button onclick="tutupKuis()" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">Batal</button>
+                    <button onclick="kirimKuis()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Kirim</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Hasil Kuis -->
+        <div id="popupHasil" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Hasil Kuis</h3>
+                    <button onclick="tutupPopupHasil()" class="text-gray-500 hover:text-gray-700">
+                        <i class="bi bi-x text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <p class="font-semibold mb-2">Skor Anda:</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-2xl font-bold text-green-800">5</div>
+                        <p class="text-sm text-gray-600">Anda menjawab benar 5 dari 5 pertanyaan</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <p class="font-semibold mb-2">Seal:</p>
+                    <div class="grid grid-cols-5 gap-2 text-center">
+                        <div class="p-2 bg-green-100 rounded">1</div>
+                        <div class="p-2 bg-green-100 rounded">2</div>
+                        <div class="p-2 bg-green-100 rounded">3</div>
+                        <div class="p-2 bg-green-100 rounded">4</div>
+                        <div class="p-2 bg-green-100 rounded">5</div>
+                        <div class="p-2 bg-green-100 rounded">6</div>
+                        <div class="p-2 bg-green-100 rounded">7</div>
+                        <div class="p-2 bg-green-100 rounded">8</div>
+                        <div class="p-2 bg-green-100 rounded">9</div>
+                        <div class="p-2 bg-green-100 rounded">10</div>
+                        <div class="p-2 bg-green-100 rounded">11</div>
+                        <div class="p-2 bg-green-100 rounded">12</div>
+                        <div class="p-2 bg-green-100 rounded">13</div>
+                        <div class="p-2 bg-green-100 rounded">14</div>
+                        <div class="p-2 bg-green-100 rounded">15</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button onclick="tutupPopupHasil()" class="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Selesai</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Tambahkan fungsi ini di dalam script yang sudah ada
+            function bukaKuis(judul, pertanyaan, opsiJawaban) {
+                document.getElementById('judulKuis').textContent = judul;
+                document.getElementById('pertanyaanKuis').textContent = pertanyaan;
+                
+                // Sembunyikan konten kursus dan tampilkan kuis
+                document.querySelector('.px-6.py-6').classList.add('hidden');
+                document.getElementById('kuisContainer').classList.remove('hidden');
+            }
+
+            function tutupKuis() {
+                document.querySelector('.px-6.py-6').classList.remove('hidden');
+                document.getElementById('kuisContainer').classList.add('hidden');
+            }
+
+            function kirimKuis() {
+                // Validasi jawaban terpilih
+                const jawabanTerpilih = document.querySelector('input[name="jawaban"]:checked');
+                if (!jawabanTerpilih) {
+                    alert('Silakan pilih jawaban terlebih dahulu');
+                    return;
+                }
+                
+                // Tutup kuis dan tampilkan popup hasil
+                tutupKuis();
+                document.getElementById('popupHasil').classList.remove('hidden');
+            }
+
+            function tutupPopupHasil() {
+                document.getElementById('popupHasil').classList.add('hidden');
+            }
+
+            // Modifikasi fungsi bukaMateri untuk menangani kuis
+            function bukaMateri(type, content, judul) {
+                if (type === 'video') {
+                    window.open(content, '_blank');
+                } else if (type === 'dokumen') {
+                    window.open(content, '_blank');
+                } else if (type === 'kuis') {
+                    // Contoh pertanyaan kuis
+                    const pertanyaan = "Seorang pengendara sepeda gunung aktif yang sering melalui lintasan turunan curam menginginkan efisiensi saat berganti posisi duduk secara cepat tanpa menghentikan laju sepeda. Komponen yang paling sesuai untuk memenuhi kebutuhan tersebut adalah...";
+                    
+                    bukaKuis(judul, pertanyaan);
+                }
+            }
+        </script>
     </main>
 </div>
 </body>
