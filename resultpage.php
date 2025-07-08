@@ -113,7 +113,7 @@
               <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
               <div class="flex flex-col items-center justify-center mb-3">
                 <p class="text-3xl font-extrabold text-gray-900 leading-none">90<span class="text-sm font-normal text-gray-500">/100</span></p>
-                <p class="text-base font-semibold text-gray-800 mt-2 text-center">Sistem Pengereman dan Keselamatan</p>
+                <p class="text-base font-semibold text-gray-800 mt-2 min-h-[48px]">Sistem Pengereman dan Keselamatan</p>
               </div>
                 <div class="text-sm text-gray-500 mt-4 flex items-center gap-1">
                   <i class="bi bi-calendar-event"></i> 08/04/2025
