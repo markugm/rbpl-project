@@ -506,45 +506,22 @@
                 }
 
                 function tampilkanHasilKuis() {
-                    // Hitung jawaban benar
-                    let jawabanBenar = 0;
-                    kuisData.pertanyaan.forEach((pertanyaan, index) => {
-                        if (kuisData.jawabanUser[index] === pertanyaan.jawabanBenar) {
-                            jawabanBenar++;
-                        }
-                    });
-                    
-                    // Update skor
-                    document.getElementById('skorCircle').textContent = jawabanBenar;
-                    document.getElementById('detailSkor').textContent = `Anda menjawab benar ${jawabanBenar} dari ${kuisData.pertanyaan.length} pertanyaan`;
-                    
-                    // Update warna skor berdasarkan performa
-                    const skorCircle = document.getElementById('skorCircle');
-                    if (jawabanBenar <= 2) {
-                        skorCircle.classList.remove('bg-green-100', 'text-green-800');
-                        skorCircle.classList.add('bg-red-100', 'text-red-800');
-                    } else if (jawabanBenar <= 3) {
-                        skorCircle.classList.remove('bg-green-100', 'text-green-800');
-                        skorCircle.classList.add('bg-yellow-100', 'text-yellow-800');
-                    } else {
-                        skorCircle.classList.remove('bg-red-100', 'text-red-800', 'bg-yellow-100', 'text-yellow-800');
-                        skorCircle.classList.add('bg-green-100', 'text-green-800');
+                // Hitung jawaban benar
+                let jawabanBenar = 0;
+                kuisData.pertanyaan.forEach((pertanyaan, index) => {
+                    if (kuisData.jawabanUser[index] === pertanyaan.jawabanBenar) {
+                        jawabanBenar++;
                     }
-                    
-                    // Isi grid seal
-                    const gridSeal = document.getElementById('gridSeal');
-                    gridSeal.innerHTML = '';
-                    for (let i = 1; i <= 15; i++) {
-                        const isActive = i <= jawabanBenar * 3;
-                        gridSeal.innerHTML += `
-                            <div class="p-2 rounded ${isActive ? 'bg-green-100' : 'bg-gray-100'}">${i}</div>
-                        `;
-                    }
-                    
-                    // Tutup kuis dan tampilkan popup hasil
-                    tutupKuis();
-                    document.getElementById('popupHasil').classList.remove('hidden');
-                }
+                });
+
+                // Update skor
+                document.getElementById('hasilSkor').textContent = 
+                    `Anda menjawab benar ${jawabanBenar} dari ${kuisData.pertanyaan.length} pertanyaan`;
+
+                // Tutup kuis dan tampilkan popup hasil
+                tutupKuis();
+                document.getElementById('popupHasil').classList.remove('hidden');
+            }
 
                 function tutupPopupHasil() {
                     document.getElementById('popupHasil').classList.add('hidden');
