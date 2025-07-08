@@ -489,21 +489,18 @@
                 }
 
                 function kirimKuis() {
-                    // Simpan jawaban user
                     const jawabanTerpilih = document.querySelector('input[name="jawaban"]:checked');
                     if (!jawabanTerpilih) {
                         alert('Silakan pilih jawaban terlebih dahulu');
                         return;
                     }
-                    
+
                     kuisData.jawabanUser[kuisData.pertanyaanAktif] = parseInt(jawabanTerpilih.value);
-                    
-                    // Cek apakah sudah menjawab semua pertanyaan
-                    if (kuisData.jawabanUser.length < kuisData.pertanyaan.length) {
-                        // Tampilkan pertanyaan berikutnya
+
+                    // Jika masih ada pertanyaan selanjutnya
+                    if (kuisData.pertanyaanAktif < kuisData.pertanyaan.length - 1) {
                         tampilkanPertanyaan(kuisData.pertanyaanAktif + 1);
                     } else {
-                        // Hitung skor dan tampilkan hasil
                         tampilkanHasilKuis();
                     }
                 }
