@@ -67,12 +67,9 @@
               <!-- Card Template -->
               <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-48">
                 <!-- Nilai -->
-                <div class="flex items-center gap-3">
-                  <div class="bg-gray-100 border rounded-md px-2 py-1 text-center">
-                    <p class="text-xl font-bold text-gray-900 leading-none">80</p>
-                    <p class="text-xs text-gray-500">/ 100</p>
-                  </div>
-                  <p class="text-base font-semibold text-gray-800">Anatomi Sepeda</p>
+                <div class="flex flex-col items-center justify-center mb-3">
+                  <p class="text-3xl font-extrabold text-gray-900 leading-none">80<span class="text-sm font-normal text-gray-500">/100</span></p>
+                  <p class="text-base font-semibold text-gray-800 mt-2 text-center">Anatomi Sepeda</p>
                 </div>
 
                 <!-- Tanggal -->
