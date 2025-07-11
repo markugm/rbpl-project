@@ -13,16 +13,16 @@
                         <div>
                             <div class="text-2xl font-bold mb-10 text-center">🚲 JAGO SEPEDA</div>
                             <nav class="space-y-2">
-                            <a href="homepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+                            <a href="homepage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                                 <i class="bi bi-house-door"></i> Beranda
                             </a>
-                            <a href="coursepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+                            <a href="coursepage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                                 <i class="bi bi-book"></i> Kursus
                             </a>
-                            <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+                            <a href="resultpage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                                 <i class="bi bi-bar-chart-line"></i> Hasil Kuis
                             </a>
-                            <a href="profilepage.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
+                            <a href="profilepage-pgw.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
                                 <i class="bi bi-person"></i> Profil
                             </a>
                             </nav>
@@ -63,7 +63,7 @@
                     </div>
                         <div class="p-8">
                             <h1 class="text-2xl font-bold text-gray-900 mb-6">Edit Profil</h1>
-                            <form action="profilepage.php" method="POST" class="bg-gray-200 rounded-lg shadow p-6 flex flex-col lg:flex-row gap-6">
+                            <form action="profilepage-pgw.php" method="POST" class="bg-gray-200 rounded-lg shadow p-6 flex flex-col lg:flex-row gap-6">
                                 <!-- Form Kiri -->
                                 <div class="flex-1 space-y-4">
                                     <!-- Nama Lengkap -->
