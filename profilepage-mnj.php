@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <a href="editprofile-pgw.php" class="bg-blue-800 hover:bg-blue-900 text-white px-10 py-2 mt-4 rounded-md text-sm font-medium transition duration-200 text-center">
+                        <a href="editprofile-mnj.php" class="bg-blue-800 hover:bg-blue-900 text-white px-10 py-2 mt-4 rounded-md text-sm font-medium transition duration-200 text-center">
                             Edit
                         </a>
                     </div>
