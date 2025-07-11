@@ -42,6 +42,7 @@ $jawaban = [
 </head>
 <body class="bg-gray-100 font-sans">
   <div class="flex min-h-screen">
+    
     <!-- Sidebar -->
     <aside class="w-60 bg-blue-900 text-white flex flex-col justify-between p-4">
       <div>
@@ -53,8 +54,11 @@ $jawaban = [
           <a href="coursepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-book"></i> Kursus
           </a>
-          <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
             <i class="bi bi-bar-chart-line"></i> Hasil Kuis
+          </a>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+            <i class="bi bi-person"></i> Profil
           </a>
         </nav>
       </div>
@@ -69,8 +73,25 @@ $jawaban = [
     </aside>
 
     <!-- Konten Utama -->
-    <main class="flex-1 p-6 space-y-6">
-      <h2 class="text-2xl font-bold mb-4">Hasil Kuis</h2>
+    <main class="flex-1 overflow-y-auto">
+      <!-- Topbar -->
+      <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
+        <button class="text-gray-700 hover:text-blue-700 text-xl">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="flex items-center gap-4">
+          <button class="text-gray-700 hover:text-blue-700 text-xl">
+            <i class="bi bi-megaphone"></i>
+          </button>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <p class="font-semibold text-gray-900">Ajuy Sutiyo</p>
+              <p class="text-sm text-gray-500">Pegawai Training</p>
+            </div>
+            <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
+          </div>
+        </div>
+      </div>
 
       <!-- Bagian Kanan -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
