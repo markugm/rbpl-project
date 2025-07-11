@@ -101,7 +101,7 @@
 
                     <!-- Tombol -->
                     <div class="flex gap-4 pt-4">
-                        <a href="profilepage.php" class="bg-blue-800 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-900">Batalkan</a>
+                        <a href="profilepage-pgw.php" class="bg-blue-800 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-900">Batalkan</a>
                         <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-900">Simpan</button>
                     </div>
                 </div>
