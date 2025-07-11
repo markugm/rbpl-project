@@ -31,7 +31,7 @@
                 <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                 <i class="bi bi-gear"></i> Pengaturan
                 </a>
-                <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-red-600 rounded">
+                <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                 <i class="bi bi-box-arrow-right"></i> Keluar
                 </a>
             </div>
@@ -48,7 +48,7 @@
                 <!-- Kanan: Megaphone + Profil -->
                 <div class="flex items-center gap-4">
                     <!-- Tombol Megaphone -->
-                    <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
+                    <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage.php'">
                         <i class="bi bi-megaphone"></i>
                     </button>
                     <!-- Info Pengguna -->
