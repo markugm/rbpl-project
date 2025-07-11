@@ -69,7 +69,8 @@
           ["judul" => "Anatomi Sepeda", "nilai" => 80, "tanggal" => "06/04/2025"],
           ["judul" => "Sistem Penggerak", "nilai" => 85, "tanggal" => "06/04/2025"],
           ["judul" => "Rantai dan Pemeliharaannya", "nilai" => 80, "tanggal" => "07/04/2025"],
-          ["judul" => "Sistem Pengereman dan Keselamatan", "nilai" => 90, "tanggal" => "08/04/2025"]
+          ["judul" => "Sistem Pengereman dan Keselamatan", "nilai" => 90, "tanggal" => "08/04/2025"],
+          ["judul" => "Roda dan Ban Sepeda", "nilai" => 95, "tanggal" => "10/04/2025"]
         ];
         ?>
 
