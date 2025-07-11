@@ -150,13 +150,21 @@
         hasilKuisList.forEach((item) => {
           kuisContainer.innerHTML += `
             <div class="border rounded-lg p-4 text-center shadow-sm">
-              <div class="text-2xl font-bold mb-1">${item.nilai}<span class="text-sm font-normal">/100</span></div>
-              <p class="text-sm font-medium mb-1">${item.judul}</p>
-              <p class="text-xs text-gray-500 mb-2">📅 ${item.tanggal}</p>
-              <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">Review</button>
+              <div class="text-2xl font-bold mb-1">
+                ${item.nilai}<span class="text-sm font-normal">/100</span>
+              </div>
+              <p class="text-base font-medium mb-2">${item.judul}</p>
+              <div class="flex items-center justify-center text-gray-500 text-sm mb-3">
+                <i class="bi bi-calendar mr-1"></i>
+                <span>${item.tanggal}</span>
+              </div>
+              <button class="w-full bg-blue-700 text-white text-sm py-1.5 rounded hover:bg-blue-800 transition">
+                Review
+              </button>
             </div>
           `;
         });
+
       </script>
       <footer class="border-t text-center text-sm text-gray-600 py-4 mt-6">
         Copyright © <a href="https://jagosepeda.com" class="hover:underline text-blue-700">jagosepeda.com</a> 2025
