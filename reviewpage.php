@@ -74,8 +74,7 @@ $jawaban = [
     </aside>
 
     <!-- Konten Utama -->
-    <main class="flex-1 p-6 space-y-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">Hasil Kuis</h2>
+    <main class="flex-1 overflow-y-auto">
 
       <!-- Topbar -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
