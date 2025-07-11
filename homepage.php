@@ -72,9 +72,9 @@
           <div>
             <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
             <p class="text-gray-600">Hari ini adalah hari ke-7 pelatihanmu</p>
-            <button class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
+            <a href="profilepage.php" class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
               Buka Akun Kamu &gt;
-            </button>
+            </a>
           </div>
         </div>
         <!-- Kanan -->
@@ -100,7 +100,7 @@
       <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow mb-6">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-semibold">Kursus</h2>
-          <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+          <a href="coursepage.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
         </div>
         <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
@@ -109,7 +109,7 @@
       <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-semibold">Hasil Kuis Kamu</h2>
-          <a href="#" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+          <a href="resultpage.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
         </div>
         <div id="daftarHasilKuis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
