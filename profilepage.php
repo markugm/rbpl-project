@@ -95,7 +95,7 @@
             <div class="space-y-2 text-sm text-gray-700">
               <p><i class="bi bi-gender-male mr-2"></i> Jenis Kelamin: <strong>Laki-laki</strong></p>
               <p><i class="bi bi-calendar mr-2"></i> Tanggal Lahir: <strong>12/09/2002</strong></p>
-              <p><i class="bi bi-telephone mr-2"></i> Telepon: <strong>080000000001</strong></p>
+              <p><i class="bi bi-telephone mr-2"></i> Telepon: <strong>0812-3456-7891</strong></p>
               <p><i class="bi bi-geo-alt mr-2"></i> Alamat: <strong>Jl. Kudus Jepara, Prambatan Lor, Kab. Kudus</strong></p>
             </div>
             <button class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded mt-4">
