@@ -31,7 +31,7 @@
                             <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                             <i class="bi bi-gear"></i> Pengaturan
                             </a>
-                            <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-red-600 rounded">
+                            <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
                             <i class="bi bi-box-arrow-right"></i> Keluar
                             </a>
                         </div>
