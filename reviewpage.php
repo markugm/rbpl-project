@@ -97,7 +97,7 @@ $jawaban = [
 
       <!-- Judul -->
       <div class="px-6 py-6">
-        <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Hasil Kuis</h2>
       </div>
 
       <!-- Bagian Kanan -->
