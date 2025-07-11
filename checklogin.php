@@ -1,28 +1,43 @@
 <?php
 session_start();
 
-$konek = new mysqli('localhost', 'root', '', 'user-jagopedia');
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-if ($konek->connect_error) {
-    die("koneksi gagal: " . $konek->connect_error);
-}
+$datadiri = [
+    [
+        'email' => 'manager@jagosepeda.com',
+        'password' => 'manager123',
+        'role' => 'manager'
+    ],
+    [
+        'email' => 'pegawai1@jagosepeda.com',
+        'password' => 'pegawai1*',
+        'role' => 'pegawai'
+    ]
+];
 
-$email = htmlspecialchars($_POST["email"]);
-$password = htmlspecialchars($_POST['password']);
+$loginSuccess = false;
 
-$query = "SELECT * FROM `users` WHERE email='$email';";
-$hasil = mysqli_query($konek, $query);
-$dataUser = mysqli_fetch_array($hasil);
+foreach ($users as $user) {
+    if ($email === $user['email'] && $password === $user['password']) {
+        $loginSuccess = true;
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['logged_in'] = true;
 
-if (mysqli_num_rows($hasil) === 1) {
-    if (password_verify($password, $dataUser["password"])) {
-        $_SESSION['email'] = $dataUser['email'];
-        $_SESSION['id_user'] = $dataUser['id_user'];
-        header("Location: homepage.php");
-        exit;
+        if ($user['role'] === 'manager') {
+            header("Location: homepage-mnj.php");
+            exit();
+        } else {
+            header("Location: homepage-pgw.php");
+            exit();
+        }
     }
 }
 
-header("Location: loginpage.php?pesan=gagal");
-exit;
+if (!$loginSuccess) {
+    header("Location: loginpage.php?pesan=gagal");
+    exit();
+}
 ?>
