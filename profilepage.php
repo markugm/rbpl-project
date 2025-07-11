@@ -77,7 +77,7 @@
           </div>
           <div class="text-right space-y-1">
             <div class="bg-gray-100 px-4 py-2 rounded">
-              <p><i class="bi bi-journal-bookmark"></i> <strong>10/16</strong> Kursus</p>
+              <p><i class="bi bi-book"></i> <strong>10/16</strong> Kursus</p>
             </div>
             <div class="bg-gray-100 px-4 py-2 rounded">
               <p><i class="bi bi-bar-chart-line"></i> <strong>4/7</strong> Kuis</p>
