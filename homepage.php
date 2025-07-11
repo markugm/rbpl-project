@@ -80,14 +80,14 @@
         <!-- Kanan -->
         <div class="flex gap-4">
           <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
-            <span class="text-xl">📖</span>
+            <i class="bi bi-book text-xl text-gray-800 mt-1"></i>
             <div>
               <p class="font-bold">2/16</p>
               <p class="text-sm text-gray-600">Kursus</p>
             </div>
           </div>
           <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
-            <span class="text-xl">📈</span>
+            <i class="bi bi-bar-chart-line text-xl text-gray-800 mt-1"></i>
             <div>
               <p class="font-bold">4/7</p>
               <p class="text-sm text-gray-600">Kuis</p>
