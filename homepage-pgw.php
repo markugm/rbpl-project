@@ -16,13 +16,13 @@
           <a href="homepage-pgw.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
             <i class="bi bi-house-door"></i> Beranda
           </a>
-          <a href="coursepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="coursepage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-book"></i> Kursus
           </a>
-          <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="resultpage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-bar-chart-line"></i> Hasil Kuis
           </a>
-          <a href="profilepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="profilepage-pgw.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-person"></i> Profil
           </a>
         </nav>
@@ -72,7 +72,7 @@
           <div>
             <h2 class="text-xl font-bold">Selamat Pagi, Ajuy Sutiyo</h2>
             <p class="text-gray-600">Hari ini adalah hari ke-7 pelatihanmu</p>
-            <a href="profilepage.php" class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
+            <a href="profilepage-pgw.php" class="mt-2 text-sm text-blue-800 border border-blue-800 px-3 py-1 rounded hover:bg-blue-50 transition">
               Buka Akun Kamu &gt;
             </a>
           </div>
@@ -100,7 +100,7 @@
       <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow mb-6">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-semibold">Kursus</h2>
-          <a href="coursepage.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+          <a href="coursepage-pgw.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
         </div>
         <div id="daftarKursus" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
@@ -109,7 +109,7 @@
       <div class="max-w-6xl mx-auto p-4 bg-white rounded-xl shadow">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-semibold">Hasil Kuis Kamu</h2>
-          <a href="resultpage.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
+          <a href="resultpage-pgw.php" class="text-blue-700 text-sm hover:underline">Selengkapnya &gt;</a>
         </div>
         <div id="daftarHasilKuis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
       </div>
