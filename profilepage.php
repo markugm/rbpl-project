@@ -157,7 +157,7 @@
 
             <!-- Footer -->
             <footer class="text-center text-sm text-gray-500 pt-6 pb-2">
-                Copyright © jagosepeda.com 2025
+                Copyright © <a href="https://jagosepeda.com" class="hover:underline text-blue-700">jagosepeda.com</a> 2025
             </footer>
         </div>
     </main>
