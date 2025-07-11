@@ -48,9 +48,10 @@
         <!-- Kanan: Megaphone + Profil -->
         <div class="flex items-center gap-4">
           <!-- Tombol Megaphone -->
-          <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="alert('Notifikasi atau pengumuman di sini')">
+            <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage.php'">
             <i class="bi bi-megaphone"></i>
-          </button>
+            </button>
+
           <!-- Info Pengguna -->
           <div class="flex items-center gap-3">
             <div class="text-right">
