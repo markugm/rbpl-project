@@ -2,96 +2,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Login - Jago Sepeda</title>
-    <style>
-        body {
-            display: flex;
-            margin: 0;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        .left {
-            width: 40%;
-            background: #f0f4ff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-        .left form {
-            width: 100%;
-            max-width: 300px;
-        }
-        .left input[type="email"],
-        .left input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .left button {
-            width: 100%;
-            padding: 10px;
-            background-color: #1d3b8b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .right {
-            width: 60%;
-            background: url('assets/images/toko.jpg') center center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        .info {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 20px;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Login - Jago Sepeda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
-    <div class="left">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Jago Sepeda" width="150">
-        </div>
-        <h2>Selamat Datang!</h2>
+<body class="relative min-h-screen flex items-center justify-center bg-gray-100">
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <img src="toko-sepeda.jpeg" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-white bg-opacity-70"></div>
+  </div>
 
-        <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'gagal') : ?>
-            <p style="color:red;">Email atau password salah!</p>
-        <?php endif; ?>
-
-        <form method="POST" action="check-login.php">
-            <input type="email" name="email" placeholder="Masukkan email" required>
-            <input type="password" name="password" placeholder="Masukkan kata sandi" required>
-            <button type="submit">Masuk</button>
-        </form>
+  <!-- Login Card -->
+  <div class="relative z-10 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg w-full max-w-md p-8">
+    <div class="flex flex-col items-center mb-6">
+      <img src="jago-sepeda.jpeg" alt="Jago Sepeda" class="h-24 mb-3" />
+      <h1 class="text-2xl font-semibold text-blue-900">Masuk Akun</h1>
+      <p class="text-gray-600 text-sm">Silakan login untuk melanjutkan</p>
     </div>
 
-    <div class="right">
-        <div class="info">
-            <p><strong>Toko Sepeda Prambatan Jaya</strong><br>
-            Jl. Kudus - Jepara No. 419, Prambatan Lor, Kec. Kaliwungu, Kab. Kudus, Jawa Tengah Indonesia<br>
-            <a href="mailto:prambatan.jaya@gmail.com" style="color: #4fc3f7;">prambatan.jaya@gmail.com</a><br>
-            +628562736372</p>
-            <p>
-                Sepeda<br>
-                Mainan Anak<br>
-                Sparepart<br>
-                Aksesoris<br>
-                Service
-            </p>
-        </div>
-    </div>
+    <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'gagal') : ?>
+      <div class="bg-red-100 text-red-700 px-4 py-2 rounded mb-4 text-sm text-center">
+        Email atau kata sandi salah!
+      </div>
+    <?php endif; ?>
+
+    <form method="POST" action="checklogin.php" class="space-y-4">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan email">
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
+        <input type="password" id="password" name="password" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan kata sandi">
+      </div>
+      <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 rounded transition">
+        Masuk
+      </button>
+    </form>
+
+    <p class="mt-6 text-xs text-gray-500 text-center">© 2025 Jago Sepeda</p>
+  </div>
 </body>
 </html>
