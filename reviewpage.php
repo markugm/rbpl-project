@@ -75,9 +75,6 @@ $jawaban = [
 
     <!-- Konten Utama -->
     <main class="flex-1 overflow-y-auto">
-        <div class="px-6 py-6">
-            <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
-        </div>
 
       <!-- Topbar -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
@@ -96,6 +93,11 @@ $jawaban = [
             <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
           </div>
         </div>
+      </div>
+
+      <!-- Judul -->
+      <div class="px-6 py-6">
+        <h2 class="text-2xl font-bold mb-6">Hasil Kuis</h2>
       </div>
 
       <!-- Bagian Kanan -->
@@ -140,7 +142,7 @@ $jawaban = [
             <span class="ml-4 w-3 h-3 bg-green-500 rounded-full inline-block"></span> <?= $benar ?> soal
           </div>
         </div>
-      </div>
+    </div>
     </main>
   </div>
 </body>
