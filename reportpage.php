@@ -30,7 +30,7 @@
     <h1 class="text-2xl font-bold text-gray-900 mb-2">Buat Laporan</h1>
     <p class="text-gray-700 mb-6">Laporkan permasalahan yang kamu temukan pada web JagoPedia</p>
 
-    <form id="reportForm" method="POST" action="proses_laporan.php">
+    <form id="reportForm" onsubmit="return false;">
       <div class="bg-gray-200 rounded-lg p-6">
         <!-- Progress -->
         <div class="flex justify-center items-center gap-4 mb-6">
@@ -174,6 +174,18 @@
     </form>
   </div>
 
+  <div id="popupSuccess" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-8 max-w-md text-center">
+      <div class="text-green-600 text-3xl mb-2"><i class="bi bi-check-circle-fill"></i></div>
+      <h2 class="text-xl font-bold mb-2">Laporan Telah Berhasil Dikirim</h2>
+      <p class="mb-6 text-gray-700">Terima kasih atas partisipasi Anda dalam menjaga kualitas layanan JagoPedia</p>
+      <div class="flex justify-between">
+        <a href="#" onclick="resetForm()" class="text-blue-900 font-medium">&lt; Buat Laporan</a>
+        <a href="homepage.php" class="text-blue-900 font-medium">Kembali &gt;</a>
+      </div>
+    </div>
+  </div>
+
   <script>
     const steps = ['Kategori', 'Identitas', 'Detail'];
     let currentStep = 1;
@@ -210,7 +222,7 @@
         currentStep++;
         updateSteps();
       } else {
-        document.getElementById('reportForm').submit();
+       document.getElementById('popupSuccess').classList.remove('hidden');
       }
     });
 
@@ -225,6 +237,15 @@
 
     updateSteps();
   </script>
+
+    <script>
+    function resetForm() {
+        document.getElementById('reportForm').reset();
+        currentStep = 1;
+        updateSteps();
+        document.getElementById('popupSuccess').classList.add('hidden');
+    }
+    </script>
 
 </body>
 </html>
