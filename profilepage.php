@@ -51,7 +51,6 @@
             <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage.php'">
             <i class="bi bi-megaphone"></i>
             </button>
-
           <!-- Info Pengguna -->
           <div class="flex items-center gap-3">
             <div class="text-right">
