@@ -75,7 +75,6 @@ $jawaban = [
 
     <!-- Konten Utama -->
     <main class="flex-1 overflow-y-auto">
-        <h2 class="text-2xl font-bold mb-4">Hasil Kuis</h2>
       <!-- Topbar -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
         <button class="text-gray-700 hover:text-blue-700 text-xl">
@@ -91,6 +90,7 @@ $jawaban = [
               <p class="text-sm text-gray-500">Pegawai Training</p>
             </div>
             <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover">
+            <h2 class="text-2xl font-bold mb-4">Hasil Kuis</h2>
           </div>
         </div>
       </div>
