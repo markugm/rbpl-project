@@ -77,7 +77,7 @@
           </div>
           <div class="space-y-2">
                 <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2">
-                    <i class="bi bi-journal-bookmark text-lg"></i>
+                    <i class="bi bi-book text-lg"></i>
                     <p class="text-sm"><strong>10/16</strong> Kursus</p>
                 </div>
                 <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2">
