@@ -48,13 +48,13 @@ $jawaban = [
       <div>
         <div class="text-2xl font-bold mb-10 text-center">🚲 JAGO SEPEDA</div>
         <nav class="space-y-2">
-          <a href="homepage.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
+          <a href="homepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-house-door"></i> Beranda
           </a>
           <a href="coursepage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-book"></i> Kursus
           </a>
-          <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="resultpage.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
             <i class="bi bi-bar-chart-line"></i> Hasil Kuis
           </a>
           <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
@@ -98,7 +98,7 @@ $jawaban = [
       </div>
 
       <!-- Judul Halaman -->
-      <div class="px-6 pt-6"></div>
+      <div class="px-2 pt-2"></div>
 
       <!-- Bagian Kanan -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
