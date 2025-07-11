@@ -75,14 +75,16 @@
               <p class="text-blue-800 font-semibold text-sm">Pegawai Training</p>
             </div>
           </div>
-          <div class="text-right space-y-1">
-            <div class="bg-gray-100 px-4 py-2 rounded">
-              <p><i class="bi bi-book"></i> <strong>10/16</strong> Kursus</p>
+          <div class="space-y-2">
+                <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2">
+                    <i class="bi bi-journal-bookmark text-lg"></i>
+                    <p class="text-sm"><strong>10/16</strong> Kursus</p>
+                </div>
+                <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2">
+                    <i class="bi bi-bar-chart-line text-lg"></i>
+                    <p class="text-sm"><strong>4/7</strong> Kuis</p>
+                </div>
             </div>
-            <div class="bg-gray-100 px-4 py-2 rounded">
-              <p><i class="bi bi-bar-chart-line"></i> <strong>4/7</strong> Kuis</p>
-            </div>
-          </div>
         </div>
 
         <!-- 2 Kolom: Info Pribadi & Riwayat Aktivitas -->
