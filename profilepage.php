@@ -98,7 +98,7 @@
               <p><i class="bi bi-telephone mr-2"></i> Telepon: <strong>0812-3456-7891</strong></p>
               <p><i class="bi bi-geo-alt mr-2"></i> Alamat: <strong>Jl. Kudus Jepara, Prambatan Lor, Kab. Kudus</strong></p>
             </div>
-            <button class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded mt-4">
+            <button class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded mt-4">
               Edit
             </button>
           </div>
