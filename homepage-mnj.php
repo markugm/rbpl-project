@@ -27,7 +27,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'manager') {
           <a href="coursepage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-book"></i> Kursus
           </a>
-          <a href="resultpage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="progresspage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-bar-chart-line"></i> Progres
           </a>
           <a href="profilepage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
