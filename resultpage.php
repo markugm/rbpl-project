@@ -88,9 +88,10 @@
               <div class="text-sm text-gray-500 mt-4 flex items-center gap-1 justify-center">
                 <i class="bi bi-calendar-event"></i> <?= $item['tanggal'] ?>
               </div>
-              <button class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium transition duration-200 ease-in-out">
+              <a href="reviewpage.php?judul=<?= urlencode($item['judul']) ?>" 
+                class="bg-blue-800 hover:bg-blue-900 text-white w-full mt-3 py-2 rounded-md text-sm font-medium text-center block transition duration-200 ease-in-out">
                 Review
-              </button>
+              </a>
             </div>
           <?php endforeach; ?>
         </div>
