@@ -90,17 +90,47 @@
             <!-- 2 Kolom: Info Pribadi & Riwayat Aktivitas -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <!-- Informasi Pribadi -->
-                <div class="bg-white rounded-lg shadow p-6 space-y-4">
-                <h3 class="font-bold text-lg text-gray-800">Informasi Pribadi</h3>
-                <div class="space-y-2 text-sm text-gray-700">
-                    <p><i class="bi bi-gender-male mr-2"></i> Jenis Kelamin: <strong>Laki-laki</strong></p>
-                    <p><i class="bi bi-calendar mr-2"></i> Tanggal Lahir: <strong>12/09/2002</strong></p>
-                    <p><i class="bi bi-telephone mr-2"></i> Telepon: <strong>0812-3456-7891</strong></p>
-                    <p><i class="bi bi-geo-alt mr-2"></i> Alamat: <strong>Jl. Kudus Jepara, Prambatan Lor, Kab. Kudus</strong></p>
-                </div>
-                <button class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded mt-4 text-sm">
-                    Edit
-                </button>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3">Informasi Pribadi</h3>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <!-- Jenis Kelamin -->
+                        <div class="flex items-start gap-2 border-b pb-2">
+                            <i class="bi bi-person text-xl text-gray-800 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-sm text-black">Jenis Kelamin</p>
+                                <p class="text-sm">Laki-laki</p>
+                            </div>
+                        </div>
+                        <!-- Tanggal Lahir -->
+                        <div class="flex items-start gap-2 border-b pb-2">
+                            <i class="bi bi-calendar text-xl text-gray-800 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-sm text-black">Tanggal Lahir</p>
+                                <p class="text-sm">12/09/2002</p>
+                            </div>
+                        </div>
+                        <!-- Telepon -->
+                        <div class="flex items-start gap-2 border-b pb-2">
+                            <i class="bi bi-telephone text-lg text-gray-800 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-sm text-black">Telepon</p>
+                                <p class="text-sm">080000000001</p>
+                            </div>
+                        </div>
+                        <!-- Alamat -->
+                        <div class="flex items-start gap-2">
+                            <i class="bi bi-geo-alt text-lg text-gray-800 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-sm text-black">Alamat</p>
+                                <p class="text-sm leading-snug">Jl. Kudus Jepara, Prambatan Lor, Kab. Kudus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                    <button class="bg-blue-800 hover:bg-blue-900 text-white px-10 py-2 mt-4 rounded-md text-sm font-medium transition duration-200">
+                        Edit
+                    </button>
+                    </div>
                 </div>
 
                 <!-- Riwayat Aktivitas -->
