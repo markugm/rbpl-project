@@ -75,7 +75,6 @@ $jawaban = [
 
     <!-- Konten Utama -->
     <main class="flex-1 overflow-y-auto">
-
       <!-- Topbar -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
         <button class="text-gray-700 hover:text-blue-700 text-xl">
@@ -137,7 +136,7 @@ $jawaban = [
             <span class="ml-4 w-3 h-3 bg-green-500 rounded-full inline-block"></span> <?= $benar ?> soal
           </div>
         </div>
-    </div>
+      </div>
     </main>
   </div>
 </body>
