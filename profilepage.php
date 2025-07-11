@@ -127,9 +127,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                    <button class="bg-blue-800 hover:bg-blue-900 text-white px-10 py-2 mt-4 rounded-md text-sm font-medium transition duration-200">
-                        Edit
-                    </button>
+                        <a href="editprofile.php" class="bg-blue-800 hover:bg-blue-900 text-white px-10 py-2 mt-4 rounded-md text-sm font-medium transition duration-200 text-center">
+                            Edit
+                        </a>
                     </div>
                 </div>
 
@@ -138,23 +138,23 @@
                     <h3 class="font-bold text-lg text-gray-800 mb-4">Riwayat Aktivitas</h3>
                     <div class="space-y-3">
                         <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
-                        <div>
-                            <p class="font-medium">Pengenalan Sepeda</p>
-                            <p class="text-sm text-gray-600">Ukuran dan Geometri Sepeda</p>
-                        </div>
-                        <p class="text-sm text-gray-500">07/04/2025</p>
-                        </div>
-                        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
-                        <div>
-                            <p class="font-medium">Pengenalan Sepeda</p>
-                            <p class="text-sm text-gray-600">Anatomi Sepeda</p>
-                        </div>
-                        <p class="text-sm text-gray-500">07/04/2025</p>
+                            <div>
+                                <p class="font-medium">Pengenalan Sepeda</p>
+                                <p class="text-sm text-gray-600">Ukuran dan Geometri Sepeda</p>
+                            </div>
+                            <p class="text-sm text-gray-500">07/04/2025</p>
                         </div>
                         <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
-                        <div>
-                            <p class="font-medium text-gray-400 italic">Aktivitas lainnya</p>
+                            <div>
+                                <p class="font-medium">Pengenalan Sepeda</p>
+                                <p class="text-sm text-gray-600">Anatomi Sepeda</p>
+                            </div>
+                            <p class="text-sm text-gray-500">07/04/2025</p>
                         </div>
+                        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+                            <div>
+                                <p class="font-medium text-gray-400 italic">Aktivitas lainnya</p>
+                            </div>
                         </div>
                     </div>
                 </div>
