@@ -19,7 +19,7 @@ $datadiri = [
 
 $loginSuccess = false;
 
-foreach ($users as $user) {
+foreach ($datadiri as $user) {
     if ($email === $user['email'] && $password === $user['password']) {
         $loginSuccess = true;
         $_SESSION['email'] = $user['email'];
