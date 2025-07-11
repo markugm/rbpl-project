@@ -118,17 +118,25 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'manager') {
         const progresContainer = document.getElementById("daftarProgres");
 
         kursusList.forEach((item, index) => {
-          kursusContainer.innerHTML += `
-            <div class="border rounded-lg p-4 shadow-sm">
-              <div class="relative h-24 bg-gray-100 rounded mb-3">
-                <span class="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full">#${index + 1}</span>
-              </div>
-              <h3 class="font-semibold text-sm mb-2">${item.judul}</h3>
-              <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">${item.tugas} Ditugaskan</button>
-              <p class="text-xs text-gray-500 mt-2">Diedit ${item.edit}</p>
-            </div>
-          `;
+            kursusContainer.innerHTML += `
+                <div class="border rounded-lg p-4 shadow-sm flex flex-col">
+                <div class="relative h-24 bg-gray-100 rounded mb-3">
+                    <span class="absolute top-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-full">#${index + 1}</span>
+                </div>
+                <h3 class="font-semibold text-sm mb-2">${item.judul}</h3>
+                <!-- Wrapper ini yang akan terdorong ke bawah -->
+                <div class="mt-auto flex flex-col gap-2">
+                    <button class="w-full bg-blue-700 text-white text-sm py-1 rounded hover:bg-blue-800 transition">
+                    ${item.tugas} Ditugaskan
+                    </button>
+                    <div class="text-xs text-gray-600">
+                    Diedit ${item.edit}
+                    </div>
+                </div>
+                </div>
+            `;
         });
+
 
         progresList.forEach((item) => {
           progresContainer.innerHTML += `
