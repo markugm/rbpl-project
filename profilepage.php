@@ -75,15 +75,21 @@
                     <p class="text-blue-800 font-semibold text-sm">Pegawai Training</p>
                 </div>
                 </div>
-                <div class="flex gap-2 mt-4 md:mt-0">
-                <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2 w-36 justify-center">
-                    <i class="bi bi-book text-lg"></i>
-                    <p class="text-sm"><strong>10/16</strong> Kursus</p>
-                </div>
-                <div class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2 w-36 justify-center">
-                    <i class="bi bi-bar-chart-line text-lg"></i>
-                    <p class="text-sm"><strong>4/7</strong> Kuis</p>
-                </div>
+                <div class="flex gap-4">
+                  <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+                    <i class="bi bi-book text-xl text-gray-800 mt-1"></i>
+                    <div>
+                      <p class="font-bold">2/16</p>
+                      <p class="text-sm text-gray-600">Kursus</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 border border-black rounded-lg px-4 py-2 min-w-[100px] justify-center text-center">
+                    <i class="bi bi-bar-chart-line text-xl text-gray-800 mt-1"></i>
+                    <div>
+                      <p class="font-bold">4/7</p>
+                      <p class="text-sm text-gray-600">Kuis</p>
+                    </div>
+                  </div>
                 </div>
             </div>
 
