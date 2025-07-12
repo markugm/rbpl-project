@@ -20,7 +20,7 @@
             <i class="bi bi-book"></i> Kursus
           </a>
           <a href="progresspage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
-            <i class="bi bi-bar-chart-line"></i> Hasil Kuis
+            <i class="bi bi-bar-chart-line"></i> Progres
           </a>
           <a href="profilepage-mnj.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
             <i class="bi bi-person"></i> Profil
