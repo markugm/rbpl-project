@@ -220,6 +220,26 @@
     </div>
   </div>
 
+  <!-- Modal Upload Video -->
+  <div id="modalUploadVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-xl relative">
+      <button onclick="closeModalUploadVideo()" class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl">&times;</button>
+      <h2 class="text-xl font-bold mb-1">Tambahkan Materi Video</h2>
+      <p class="text-sm text-gray-500 mb-4">Masukkan link video (YouTube, Vimeo, atau lainnya) sebagai materi bab.</p>
+
+      <form action="#" method="post">
+        <div class="space-y-3">
+          <input type="text" name="judul_video" placeholder="Judul materi video" class="w-full bg-white border border-gray-300 rounded p-2" required>
+          <input type="url" name="link_video" placeholder="https://contoh.com/video" class="w-full bg-white border border-gray-300 rounded p-2" required>
+        </div>
+        <div class="text-right mt-4">
+          <button type="button" onclick="closeModalUploadVideo()" class="text-sm px-4 py-2 mr-2 rounded border border-gray-400 text-gray-600">Batal</button>
+          <button type="submit" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded text-sm">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
     function openModalStep1() {
       document.getElementById("modalStep1").classList.remove("hidden");
@@ -246,6 +266,12 @@
     }
     function closeModalUploadPDF() {
       document.getElementById("modalUploadPDF").classList.add("hidden");
+    }
+     function openModalUploadVideo() {
+    document.getElementById("modalUploadVideo").classList.remove("hidden");
+    }
+    function closeModalUploadVideo() {
+      document.getElementById("modalUploadVideo").classList.add("hidden");
     }
   </script>
 </body>
