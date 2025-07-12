@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 27, 2025 at 10:48 PM
+-- Generation Time: Jul 12, 2025 at 08:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -34,6 +34,14 @@ CREATE TABLE `datadiri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `datadiri`
+--
+
+INSERT INTO `datadiri` (`id_user`, `email`, `kata_sandi`) VALUES
+(1, 'pegawai1@jagosepeda.com', 'pegawai1*'),
+(2, 'manajer@jagosepeda.com', 'manajer123');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -51,7 +59,7 @@ ALTER TABLE `datadiri`
 -- AUTO_INCREMENT for table `datadiri`
 --
 ALTER TABLE `datadiri`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

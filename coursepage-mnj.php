@@ -13,16 +13,16 @@
       <div>
         <div class="text-2xl font-bold mb-10 text-center">🚲 JAGO SEPEDA</div>
         <nav class="space-y-2">
-          <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="homepage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-house-door"></i> Beranda
           </a>
-          <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
+          <a href="coursepage-mnj.php" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded font-semibold">
             <i class="bi bi-book"></i> Kursus
           </a>
-          <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="progresspage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-bar-chart-line"></i> Progres
           </a>
-          <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+          <a href="profilepage-mnj.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
             <i class="bi bi-person"></i> Profil
           </a>
         </nav>
@@ -31,7 +31,7 @@
         <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
           <i class="bi bi-gear"></i> Pengaturan
         </a>
-        <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
+        <a href="logoutpage.php" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 rounded">
           <i class="bi bi-box-arrow-right"></i> Keluar
         </a>
       </div>
@@ -62,7 +62,7 @@
       <div class="px-6 py-6">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-2xl font-bold">Kursus</h2>
-          <a href="newchapter-mnj.php.php" class="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+          <a href="newchapter-mnj.php" class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
             <i class="bi bi-plus-circle"></i> Bab Baru
           </a>
         </div>
