@@ -53,6 +53,9 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'manager') {
           <i class="bi bi-list"></i>
         </button>
         <div class="flex items-center gap-4">
+            <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage-mnj.php'">
+                <i class="bi bi-megaphone"></i>
+            </button>
           <div class="flex items-center gap-3">
             <div class="text-right">
               <p class="font-semibold text-gray-900">Jamal Mulyadi</p>
