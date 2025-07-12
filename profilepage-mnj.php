@@ -96,7 +96,7 @@
                             <i class="bi bi-calendar text-xl text-gray-800 mt-1"></i>
                             <div>
                                 <p class="font-medium text-sm text-black">Tanggal Lahir</p>
-                                <p class="text-sm">14/01/2002</p>
+                                <p class="text-sm">14/01/1995</p>
                             </div>
                         </div>
                         <!-- Telepon -->
