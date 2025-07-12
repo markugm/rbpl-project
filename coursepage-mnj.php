@@ -190,7 +190,7 @@
         <p class="text-sm text-gray-600 mb-4" id="previewDeskripsi"></p>
         <div class="flex gap-4">
           <button onclick="openModalUploadPDF()" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">PDF</button>
-          <button onclick="alert('Buka modal tambah video')" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">Video</button>
+          <button onclick="openModalUploadVideo()" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">Video</button>
           <button onclick="alert('Buka modal kuis')" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">Kuis</button>
         </div>
       </div>
