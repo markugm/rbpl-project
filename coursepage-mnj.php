@@ -45,9 +45,9 @@
           <i class="bi bi-list"></i>
         </button>
         <div class="flex items-center gap-4">
-            <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage-mnj.php'">
-                <i class="bi bi-megaphone"></i>
-            </button>
+          <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage-mnj.php'">
+            <i class="bi bi-megaphone"></i>
+          </button>
           <div class="flex items-center gap-3">
             <div class="text-right">
               <p class="font-semibold text-gray-900">Jamal Mulyadi</p>
@@ -62,9 +62,9 @@
       <div class="px-6 py-6">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-2xl font-bold">Kursus</h2>
-          <a href="newchapter-step1-mnj.php" class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+          <button onclick="openModalStep1()" class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
             <i class="bi bi-plus-circle"></i> Bab Baru
-          </a>
+          </button>
         </div>
         <div class="flex gap-4 mb-6 border-b border-gray-300">
           <button class="pb-2 px-4 text-sm font-medium text-black border-b-2 border-black focus:outline-none">Semua</button>
@@ -157,5 +157,96 @@
       </div>
     </main>
   </div>
+
+  <!-- Modal Step 1 -->
+  <div id="modalStep1" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl">&times;</button>
+      <h2 class="text-xl font-bold mb-1">Bab Baru</h2>
+      <p class="text-sm text-gray-500 mb-4">Kursus > Bab Baru > Tambah Bab Baru</p>
+
+      <form id="formStep1" onsubmit="return gotoStep2(event)">
+        <div class="border rounded-xl p-4 bg-gray-100 mb-6">
+          <input name="judul_bab" type="text" placeholder="Masukkan judul Bab ..." class="w-full bg-white p-2 rounded mb-3" required>
+          <textarea name="deskripsi_bab" rows="3" maxlength="200" class="w-full bg-white p-2 rounded" placeholder="Tuliskan penjelasan singkat ..." required></textarea>
+          <div class="text-right text-sm text-gray-500 mt-1">Max 200 karakter</div>
+        </div>
+        <div class="text-right">
+          <button type="submit" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded">Lanjut</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Step 2 -->
+  <div id="modalStep2" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl">&times;</button>
+      <h2 class="text-xl font-bold mb-1">Bab Baru</h2>
+      <p class="text-sm text-gray-500 mb-4">Kursus > Bab Baru > Ringkasan</p>
+
+      <div class="border rounded-xl p-4 bg-gray-100 mb-6">
+        <p class="text-sm font-semibold mb-2">Bab <span id="previewJudul"></span></p>
+        <p class="text-sm text-gray-600 mb-4" id="previewDeskripsi"></p>
+        <div class="flex gap-4">
+          <button onclick="openModalUploadPDF()" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">PDF</button>
+          <button onclick="alert('Buka modal tambah video')" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">Video</button>
+          <button onclick="alert('Buka modal kuis')" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded">Kuis</button>
+        </div>
+      </div>
+      <div class="text-right">
+        <button onclick="closeModal()" class="text-sm px-4 py-2 mr-2 rounded border border-gray-400 text-gray-600">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Upload PDF -->
+  <div id="modalUploadPDF" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-xl relative">
+      <button onclick="closeModalUploadPDF()" class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl">&times;</button>
+      <h2 class="text-xl font-bold mb-1">Unggah Materi PDF</h2>
+      <p class="text-sm text-gray-500 mb-4">Tambahkan materi berformat PDF untuk bab ini.</p>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="space-y-3">
+          <input type="text" name="judul_pdf" placeholder="Judul materi PDF" class="w-full bg-white border border-gray-300 rounded p-2" required>
+          <input type="file" name="file_pdf" accept="application/pdf" class="w-full bg-white border border-gray-300 rounded p-2" required>
+        </div>
+        <div class="text-right mt-4">
+          <button type="button" onclick="closeModalUploadPDF()" class="text-sm px-4 py-2 mr-2 rounded border border-gray-400 text-gray-600">Batal</button>
+          <button type="submit" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded text-sm">Unggah</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModalStep1() {
+      document.getElementById("modalStep1").classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("modalStep1").classList.add("hidden");
+      document.getElementById("modalStep2").classList.add("hidden");
+      document.getElementById("modalUploadPDF").classList.add("hidden");
+    }
+    function gotoStep2(e) {
+      e.preventDefault();
+      const judul = e.target.judul_bab.value;
+      const deskripsi = e.target.deskripsi_bab.value;
+      sessionStorage.setItem("judul_bab", judul);
+      sessionStorage.setItem("deskripsi_bab", deskripsi);
+      document.getElementById("modalStep1").classList.add("hidden");
+      document.getElementById("previewJudul").innerText = judul;
+      document.getElementById("previewDeskripsi").innerText = deskripsi;
+      document.getElementById("modalStep2").classList.remove("hidden");
+      return false;
+    }
+    function openModalUploadPDF() {
+      document.getElementById("modalUploadPDF").classList.remove("hidden");
+    }
+    function closeModalUploadPDF() {
+      document.getElementById("modalUploadPDF").classList.add("hidden");
+    }
+  </script>
 </body>
 </html>
