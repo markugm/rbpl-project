@@ -62,7 +62,7 @@
       <div class="px-6 py-6">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-2xl font-bold">Kursus</h2>
-          <a href="newchapter-mnj.php" class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+          <a href="newchapter-step1-mnj.php" class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
             <i class="bi bi-plus-circle"></i> Bab Baru
           </a>
         </div>
