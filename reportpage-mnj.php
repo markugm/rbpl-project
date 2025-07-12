@@ -18,10 +18,10 @@
     <div class="text-xl font-semibold text-center w-full">Pusat Pelaporan</div>
     <div class="absolute right-6 flex items-center gap-3">
       <div class="text-right hidden sm:block">
-        <p class="font-semibold text-gray-900">Ajuy Sutiyo</p>
-        <p class="text-sm text-gray-500">Pegawai Training</p>
+        <p class="font-semibold text-gray-900">Jamal Mulyadi</p>
+        <p class="text-sm text-gray-500">Manajer</p>
       </div>
-      <img src="foto-ajuy.jpg" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover" />
+      <img src="foto-jamal.jpg" class="w-10 h-10 rounded-full border-2 border-blue-800 object-cover" />
     </div>
   </div>
 
@@ -131,7 +131,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block font-semibold mb-1">Nama Lengkap</label>
-              <input type="text" name="nama" class="w-full rounded-md px-3 py-2 text-sm border border-gray-300" value="Ajuy Sutiyo" required>
+              <input type="text" name="nama" class="w-full rounded-md px-3 py-2 text-sm border border-gray-300" value="Jamal Mulyadi" required>
             </div>
             <div>
               <label class="block font-semibold mb-1">Telepon</label>
@@ -139,7 +139,7 @@
             </div>
             <div class="md:col-span-2">
               <label class="block font-semibold mb-1">Email</label>
-              <input type="email" name="email" class="w-full rounded-md px-3 py-2 text-sm border border-gray-300" value="ajuys1209@gmail.com" required>
+              <input type="email" name="email" class="w-full rounded-md px-3 py-2 text-sm border border-gray-300" value="jamal.mulyadi@gmail.com" required>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@
       <p class="mb-6 text-gray-700">Terima kasih atas partisipasi Anda dalam menjaga kualitas layanan JagoPedia</p>
       <div class="flex justify-between">
         <a href="#" onclick="resetForm()" class="text-blue-900 font-medium">&lt; Buat Laporan</a>
-        <a href="homepage-pgw.php" class="text-blue-900 font-medium">Kembali &gt;</a>
+        <a href="homepage-mnj.php" class="text-blue-900 font-medium">Kembali &gt;</a>
       </div>
     </div>
   </div>
