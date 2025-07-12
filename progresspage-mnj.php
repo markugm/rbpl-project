@@ -46,11 +46,6 @@
             <i class="bi bi-list"></i>
           </button>
           <div class="flex-1 relative">
-            <input
-              type="text"
-              placeholder="Cari"
-              class="border border-gray-300 rounded-md pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
             <i class="bi bi-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
           </div>
         </div>
@@ -74,83 +69,28 @@
 
         <!-- Tabs -->
         <div class="flex gap-6 border-b border-gray-300 mb-6">
-          <button class="pb-2 text-sm font-medium text-gray-400 border-b-2 border-transparent focus:outline-none">
-            Semua
-          </button>
-          <button class="pb-2 text-sm font-medium text-black border-b-2 border-black focus:outline-none">
-            Hasil Kuis
-          </button>
+          <button class="pb-2 text-sm font-medium text-black border-b-2 border-black focus:outline-none">Semua</button>
+          <button class="pb-2 text-sm font-medium text-gray-400 border-b-2 border-transparent focus:outline-none">Hasil Kuis</button>
         </div>
 
-        <!-- Nama Kuis -->
-        <div class="bg-white border rounded-t px-4 py-2 font-semibold">
-          Pengenalan Sepeda
-        </div>
+        <!-- Daftar Progres -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Kartu Progres -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+            <img src="foto-ajuy.jpg" alt="Ajuy Sutiyo" class="w-16 h-16 rounded-full border-2 border-blue-800 object-cover mb-3" />
+            <p class="font-semibold text-center mb-2">Ajuy Sutiyo</p>
+            <button class="border border-blue-900 text-blue-900 px-3 py-1 rounded text-sm hover:bg-blue-900 hover:text-white transition">
+              Progres 65%
+            </button>
+          </div>
 
-        <!-- Tabel -->
-        <div class="overflow-x-auto border rounded-b">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-100">
-              <tr>
-                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Nama Lengkap</th>
-                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.1</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.2</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.3</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.4</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.5</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.6</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.7</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.8</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.9</th>
-                <th class="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase">No.10</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-              <!-- Baris Ajuy -->
-              <tr>
-                <td class="px-4 py-2 flex items-center gap-3">
-                  <i class="bi bi-person-circle text-2xl text-gray-500"></i>
-                  <div>
-                    <div class="font-semibold">Ajuy Sutiyo</div>
-                    <div class="text-xs text-gray-500">Pegawai Training</div>
-                  </div>
-                </td>
-                <td class="px-4 py-2">Sudah Mulai</td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-              </tr>
-              <!-- Baris Tegar -->
-              <tr class="bg-gray-50">
-                <td class="px-4 py-2 flex items-center gap-3">
-                  <i class="bi bi-person-circle text-2xl text-gray-500"></i>
-                  <div>
-                    <div class="font-semibold">Tegar Adi</div>
-                    <div class="text-xs text-gray-500">Pegawai Training</div>
-                  </div>
-                </td>
-                <td class="px-4 py-2">Belum Mulai</td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-x-circle-fill text-red-600"></i></td>
-                <td class="text-center"><i class="bi bi-check-circle-fill text-green-500"></i></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+            <img src="foto-tegar.jpg" alt="Tegar Adi" class="w-16 h-16 rounded-full border-2 border-blue-800 object-cover mb-3" />
+            <p class="font-semibold text-center mb-2">Tegar Adi</p>
+            <button class="border border-blue-900 text-blue-900 px-3 py-1 rounded text-sm hover:bg-blue-900 hover:text-white transition">
+              Progres 40%
+            </button>
+          </div>
         </div>
       </div>
     </main>
