@@ -41,23 +41,13 @@
     <main class="flex-1 overflow-y-auto">
       <!-- Top Bar -->
       <div class="bg-white px-6 py-4 shadow-sm flex justify-between items-center">
-        <div class="flex items-center gap-4 w-full">
-          <button class="text-gray-700 hover:text-blue-700 text-xl">
-            <i class="bi bi-list"></i>
-          </button>
-          <div class="flex-1 relative">
-            <input
-              type="text"
-              placeholder="Cari"
-              class="border border-gray-300 rounded-md pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-            <i class="bi bi-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-          </div>
-        </div>
+        <button class="text-gray-700 hover:text-blue-700 text-xl">
+          <i class="bi bi-list"></i>
+        </button>
         <div class="flex items-center gap-4">
-          <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage-mnj.php'">
-            <i class="bi bi-megaphone"></i>
-          </button>
+            <button class="text-gray-700 hover:text-blue-700 text-xl" onclick="window.location.href='reportpage-mnj.php'">
+                <i class="bi bi-megaphone"></i>
+            </button>
           <div class="flex items-center gap-3">
             <div class="text-right">
               <p class="font-semibold text-gray-900">Jamal Mulyadi</p>
