@@ -43,7 +43,12 @@
 
   <script>
     let jumlahPertanyaan = 0;
-
+    // Ambil judul bab dari sessionStorage
+    const judulBab = sessionStorage.getItem("judul_bab");
+    if (judulBab) {
+      document.getElementById("judulBab").value = judulBab;
+    }
+    
     function tambahPertanyaan() {
       jumlahPertanyaan++;
       const daftar = document.getElementById("daftarPertanyaan");
