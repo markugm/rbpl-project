@@ -80,7 +80,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'manager') {
               </a>
             </div>
           </div>
-          <a href="create-chapter.php" class="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+          <a href="newchapter-mnj.php.php" class="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
             <i class="bi bi-plus-circle"></i> Bab Baru
           </a>
         </div>
