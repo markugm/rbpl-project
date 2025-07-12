@@ -136,7 +136,7 @@
                         </div>
                         <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
                             <div>
-                                <p class="font-medium">Pengenalan Sepeda</p>
+                                <p class="font-medium">Pengenalan Spada</p>
                                 <p class="text-sm text-gray-600">Anatomi Sepeda</p>
                             </div>
                             <p class="text-sm text-gray-500">07/04/2025</p>
