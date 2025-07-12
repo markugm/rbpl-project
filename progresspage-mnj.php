@@ -161,7 +161,7 @@
                         <div class="flex items-center gap-3">
                             <img src="foto-tegar.jpg" class="w-8 h-8 rounded-full border-2 border-blue-800 object-cover" />
                             <div>
-                                <p class="font-semibold text-sm text-gray-800">Ajuy Sutiyo</p>
+                                <p class="font-semibold text-sm text-gray-800">Tegar Adi</p>
                                 <p class="text-xs text-gray-500">Pegawai Training</p>
                             </div>
                         </div>
